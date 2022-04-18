@@ -1,3 +1,48 @@
+<?php
+
+if(isset($_POST["submit"])){
+  // if($_POST["name"] || $_POST["sec-name"] || $_POST["phone"] || $_POST["email"] || $_POST["message"] == "") {
+  //   echo
+  // }
+  $mailto = "adrianchai88@gmail.com"; // my email address
+  $name = $_POST['name'] . $_POST['sec-name'];
+  $phone = $_POST['phone']; // getting customer phone
+  $clientEmail = $_POST['email']; // getting customer email
+  $clientMessage = $_POST['message'];
+  $subject = "";
+  $subject2 = "Confirmation: Message was submitted successfully."; // for customer confirmation
+
+  // Email body I will receive
+  $message = "Client Name: " . $name . "\n"
+  . "Phone Number: " . $phone . "\n\n"
+  . "Client Message: ". "\n" . $clientMessage;
+
+  // Message for client confirmation
+  $message2 = "Dear" . $name . "\n"
+  . "Thank you for contacting us! We will get back to you shortly!" . "\n\n"
+  . "You submitted the following message: " . "\n" . $clientMessage . "\n\n"
+  . "Regards," . "\n" . "J.A.B Ink Studio";
+
+  // Email headers
+  $headers = "From: " . $clientEmail; // Client email, I will receive
+  $headers2 - "From: " . $mailto; // This will receive client
+
+  // PHP mailer function
+
+  $results = mail($mailto, $subject, $message, $headers); // this emaill will send to me
+  $results2 = mail($clientEmail, $subject2, $message2, $headers2); //THis confirmation email to client
+
+  // checking if the email has sent successful
+
+  if ($results && $results2) {
+    $sucess = "Your message was sent sucessfully!";
+  } else {
+    $fail = "Sorry! Message was not sent successfully!";
+  }
+
+}
+
+?>
 
 <!-- Page Title--><!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
