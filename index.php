@@ -70,32 +70,32 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <!-- <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-inverse-260x82.png" alt="" width="130" height="41"/></a></div> -->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.html">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.html">Overview</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Our Team</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.html">Portfolio</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
                         <!-- RD Navbar Dropdown
                         <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
                         </ul>
                       </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.html">Testimonials</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
                         <!-- RD Navbar Dropdown-->
                         <!-- <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
@@ -139,9 +139,9 @@
                           </li>
                         </ul>
                       </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.html">Appointment</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>
                       </li>
                     </ul>
                   </div>
@@ -161,7 +161,7 @@
                 <div class="row">
                   <div class="col-sm-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>Reliable & affordable</span><span class="title-big">TATTOO SERVICES</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to Inkvo, a leading tattoo studio providing top-notch tattooing services. We love to give the opportunity to all tattoo lovers to enjoy a wider range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services.html" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to Inkvo, a leading tattoo studio providing top-notch tattooing services. We love to give the opportunity to all tattoo lovers to enjoy a wider range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -174,7 +174,7 @@
                 <div class="row">
                   <div class="col-md-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>Professional</span><span class="title-big">TATTOOISTS</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Our highly qualified team of tattooists is always ready to help you make even the wildest ideas come true. The level of our artists’ creativity & skills allows them to work on the most stunning artworks. Our team ensures that you will get what you want for you body to look exceptional.</p><a class="button button-primary" href="our-team.html" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Our highly qualified team of tattooists is always ready to help you make even the wildest ideas come true. The level of our artists’ creativity & skills allows them to work on the most stunning artworks. Our team ensures that you will get what you want for you body to look exceptional.</p><a class="button button-primary" href="our-team.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@
                 <div class="row">
                   <div class="col-md-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>100% safe & painless</span><span class="title-big">TATTOOING</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">At Inkvo, we guarantee safe tattooing at any of our salons. Even if you haven’t had any tattoos yet, rest assured that our artists will minimize any negative impressions from your first-time tattoo. We wil also take care of all healing procedures depending on your skin type.</p><a class="button button-primary" href="testimonials.html" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">At Inkvo, we guarantee safe tattooing at any of our salons. Even if you haven’t had any tattoos yet, rest assured that our artists will minimize any negative impressions from your first-time tattoo. We wil also take care of all healing procedures depending on your skin type.</p><a class="button button-primary" href="testimonials.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -233,7 +233,7 @@
             <div class="col-lg-6 col-xl-5">
               <h2>A few words about our tattoo salon</h2>
               <p class="big text-gray-800">We have been numerously recognized as #1 tattoo salon in Los Angeles. We aim to deliver the best tattooing services.</p>
-              <p class="text-spacing-60">Our staff consistently upgrades their ability and knowledge through training and seminars to ensure your tattoo or piercing is performed using the latest industry standards.</p><a class="button button-primary" href="overview.html">learn more</a>
+              <p class="text-spacing-60">Our staff consistently upgrades their ability and knowledge through training and seminars to ensure your tattoo or piercing is performed using the latest industry standards.</p><a class="button button-primary" href="overview.php">learn more</a>
             </div>
           </div>
         </div>
@@ -291,7 +291,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-01-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Tattooing</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Tattooing</a></h4>
                 <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
               </article>
             </div>
@@ -299,7 +299,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-02-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Piercing</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Piercing</a></h4>
                 <p>Want some extra holes in your body? Our piercing masters will make some for you.</p>
               </article>
             </div>
@@ -307,7 +307,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-03-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Tattoo cover up</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Tattoo cover up</a></h4>
                 <p>Got some old tattoos that you don’t find pretty? Our talented artists will cover them up for you.</p>
               </article>
             </div>
@@ -315,7 +315,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-04-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Tattoo design</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Tattoo design</a></h4>
                 <p>Nothing can beat the challenge of creating a design that initially is only in your imagination.</p>
               </article>
             </div>
@@ -323,7 +323,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-05-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Permanent makeup</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Permanent makeup</a></h4>
                 <p>Permanent makeup is a cosmetic technique which employs tattoos as a means of producing designs.</p>
               </article>
             </div>
@@ -331,7 +331,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-06-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Laser removal</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Laser removal</a></h4>
                 <p>Laser tattoo removal offers an effective solution to your unwanted tattoos as a simple outpatient procedure.</p>
               </article>
             </div>
@@ -369,34 +369,34 @@
                 <div class="team-minimal">
                   <figure><img src="images/team-2-370x370.jpg" alt="" width="370" height="370"></figure>
                   <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sam Williams</a></h4>
+                    <h4 class="team-title"><a href="team-member-profile.php">Sam Williams</a></h4>
                     <p>Junior Tattoo Artist</p>
                   </div>
                 </div>
                 <div class="team-minimal">
                   <figure><img src="images/team-1-370x370.jpg" alt="" width="370" height="370"></figure>
                   <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Mary Lucas</a></h4>
+                    <h4 class="team-title"><a href="team-member-profile.php">Mary Lucas</a></h4>
                     <p>Tattoo Artist</p>
                   </div>
                 </div>
                 <div class="team-minimal">
                   <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
                   <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">George Adams</a></h4>
+                    <h4 class="team-title"><a href="team-member-profile.php">George Adams</a></h4>
                     <p>Receptionist</p>
                   </div>
                 </div>
                 <div class="team-minimal">
                   <figure><img src="images/team-4-370x370.jpg" alt="" width="370" height="370"></figure>
                   <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sarah Peterson</a></h4>
+                    <h4 class="team-title"><a href="team-member-profile.php">Sarah Peterson</a></h4>
                     <p>Founder, Senior Tattoo Artist</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-12"><a class="button button-primary" href="our-team.html">View all team</a></div>
+            <div class="col-12"><a class="button button-primary" href="our-team.php">View all team</a></div>
           </div>
         </div>
       </section>
@@ -440,7 +440,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-12"><a class="button button-primary" href="portfolio.html">View all</a></div>
+            <div class="col-12"><a class="button button-primary" href="portfolio.php">View all</a></div>
           </div>
         </div>
       </section>
@@ -626,13 +626,13 @@
             <div class="col-lg-10">
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.html">About</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.html">Portfolio</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.html">Testimonials</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.html">Appointment</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a></li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a></li>
                 </ul>
               </div>
             </div>
@@ -643,10 +643,10 @@
         <div class="container">
           <div class="row row-20 align-items-lg-center">
             <div class="col-md-3 text-md-left">
-              <div class="footer-brand"><a href="index.html"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+              <div class="footer-brand"><a href="index.php"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
             </div>
             <div class="col-md-6">
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.php">Privacy Policy</a></p>
             </div>
           </div>
         </div>

@@ -69,32 +69,32 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.html">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.html">Overview</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Our Team</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="services.html">Services</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.html">Portfolio</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
                         <!-- RD Navbar Dropdown
                         <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
                         </ul>
                       </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.html">Testimonials</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
                         <!-- RD Navbar Dropdown-->
                         <!-- <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
@@ -138,9 +138,9 @@
                           </li>
                         </ul>
                       </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.html">Appointment</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>
                       </li>
                     </ul>
                   </div>
@@ -158,7 +158,7 @@
       <section class="breadcrumbs-custom">
         <div class="container">
           <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li class="active">Services</li>
           </ul>
         </div>
@@ -170,7 +170,7 @@
               <div class="block-xs">
                 <h2>Why Our Clients  Choose Us</h2>
                 <p class="big text-gray-800">Cras ut vestibulum tortor. In in nisi sit amet metus varius pulvinar in vitae ipsum nec mi sollicitudin luctus aliquet a, accumsan.</p>
-                <p>In ante sapien, dapibus luctus aliquet a, accumsan sit amet dolor. Mauris id facilisis dolor. Donec malesuada, est eu dignissim eleifend, est nulla dignissim nisl, a facilisis ipsum.</p><a class="button button-primary" href="appointment.html">Book Now</a>
+                <p>In ante sapien, dapibus luctus aliquet a, accumsan sit amet dolor. Mauris id facilisis dolor. Donec malesuada, est eu dignissim eleifend, est nulla dignissim nisl, a facilisis ipsum.</p><a class="button button-primary" href="appointment.php">Book Now</a>
               </div>
             </div>
             <div class="col-lg-6">
@@ -203,7 +203,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-01-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Tattooing</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Tattooing</a></h4>
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
               </article>
             </div>
@@ -211,7 +211,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-02-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Piercing</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Piercing</a></h4>
                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
               </article>
             </div>
@@ -219,7 +219,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-03-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Tattoo cover up</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Tattoo cover up</a></h4>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
               </article>
             </div>
@@ -227,7 +227,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-04-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Tattoo design</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Tattoo design</a></h4>
                 <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
               </article>
             </div>
@@ -235,7 +235,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-05-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Permanent makeup</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Permanent makeup</a></h4>
                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
               </article>
             </div>
@@ -243,7 +243,7 @@
               <article class="box-icon-modern modern-variant-2">
                 <div class="icon-modern"><img src="images/icon-06-80x80.png" alt="" width="80" height="80"/>
                 </div>
-                <h4 class="box-icon-modern-title"><a href="services.html">Laser removal</a></h4>
+                <h4 class="box-icon-modern-title"><a href="services.php">Laser removal</a></h4>
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.</p>
               </article>
             </div>
@@ -270,7 +270,7 @@
                     <p>closed</p>
                   </li>
                 </ul>
-                <p>We will be glad to see you anytime at our salon.</p><a class="button-link button-link-icon" href="appointment.html">make an appointment  <span class="icon fa-arrow-right"></span></a>
+                <p>We will be glad to see you anytime at our salon.</p><a class="button-link button-link-icon" href="appointment.php">make an appointment  <span class="icon fa-arrow-right"></span></a>
               </div>
             </div>
             <div class="d-none d-lg-block col-lg-4 img-wrap"><img src="images/home-4-6-498x688.jpg" alt="" width="498" height="688"/>
@@ -321,13 +321,13 @@
             <div class="col-lg-10">
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.html">About</a></li>
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="services.html">Services</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.html">Portfolio</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.html">Testimonials</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.html">Appointment</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="services.php">Services</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a></li>
                 </ul>
               </div>
             </div>
@@ -338,10 +338,10 @@
         <div class="container">
           <div class="row row-20 align-items-lg-center">
             <div class="col-md-3 text-md-left">
-              <div class="footer-brand"><a href="index.html"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+              <div class="footer-brand"><a href="index.php"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
             </div>
             <div class="col-md-6">
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.php">Privacy Policy</a></p>
             </div>
           </div>
         </div>

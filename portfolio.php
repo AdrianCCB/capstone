@@ -2,7 +2,7 @@
 <!-- Page Title--><!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Overview</title>
+    <title>Portfolio</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,32 +69,32 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="overview.html">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.html">Overview</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Our Team</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.html">Portfolio</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
                         <!-- RD Navbar Dropdown
                         <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
                         </ul>
                       </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.html">Testimonials</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
                         <!-- RD Navbar Dropdown-->
                         <!-- <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
@@ -138,9 +138,9 @@
                           </li>
                         </ul>
                       </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.html">Appointment</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>
                       </li>
                     </ul>
                   </div>
@@ -152,133 +152,58 @@
       </header>
       <section class="section-page-title context-dark" style="background-image: url(images/page-title-1920x427.jpg); background-size: cover;">
         <div class="container">
-          <h1 class="page-title">Overview</h1>
+          <h1 class="page-title">Portfolio</h1>
         </div>
       </section>
       <section class="breadcrumbs-custom">
         <div class="container">
           <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li class="active">Overview</li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="grid-gallery.php">Gallery</a></li>
+            <li class="active">Gallery without padding</li>
           </ul>
         </div>
       </section>
-      <section class="section section-lg bg-default">
+      <section class="section section-lg bg-default text-center">
         <div class="container">
-          <div class="row row-50 align-items-lg-center justify-content-xl-between">
-            <div class="col-lg-6">
-              <div class="block-xs">
-                <h2>Who We Are</h2>
-                <p class="big text-gray-800">Cras ut vestibulum tortor. In in nisi sit amet metus varius pulvinar in vitae ipsum nec mi sollicitudin Fusce turpis massa,</p>
-                <p>In ante sapien, dapibus luctus aliquet a, accumsan sit amet dolor. Mauris id facilisis dolor. Donec malesuada, est eu dignissim eleifend, est nulla dignissim nisl. Fusce turpis massa, mattis sit.</p>
-              </div>
-              <div class="row row-30">
-                <div class="col-sm-6">
-                  <div class="box-contact-info-with-icon"><span class="icon mdi mdi-clock icon-primary"></span>
-                    <h5>Opening Hours</h5>
-                    <ul class="list-xs">
-                      <li> <span class="text-gray-800">Monday-Friday: </span> 10:00am–8:00pm
-                      </li>
-                      <li><span class="text-gray-800">Saturday:</span> 10:00am–6:00pm
-                      </li>
-                      <li><span class="text-gray-800">Sunday: </span> Closed
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="box-contact-info-with-icon"><span class="icon mdi mdi-clock icon-primary"></span>
-                    <h5>Our Location</h5>
-                    <ul class="list-xs">
-                      <li><span class="text-gray-800">Address: </span> 545 Orchard Road Singapore 238882
-                      </li>
-                      <li><span class="text-gray-800">Offices: </span> 284-290
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+          <h2>Gallery without padding</h2>
+          <p class="block-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div class="row row-30">
+            <!-- Isotope Filters-->
+            <div class="col-lg-12">
+              <div class="isotope-filters isotope-filters-horizontal">
+                <button class="isotope-filters-toggle button button-sm button-primary" data-custom-toggle="#isotope-filters" data-custom-toggle-disable-on-blur="true">Filter<span class="caret"></span></button>
+                <ul class="isotope-filters-list" id="isotope-filters">
+                  <li><a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="#">All</a></li>
+                  <li><a data-isotope-filter="filter-1" data-isotope-group="gallery" href="#">TRADITIONAL TATTOOs</a></li>
+                  <li><a data-isotope-filter="filter-2" data-isotope-group="gallery" href="#">ORNAMENT TATTOOs</a></li>
+                  <li><a data-isotope-filter="filter-3" data-isotope-group="gallery" href="#">MINIMALIStic</a></li>
+                  <li><a data-isotope-filter="filter-4" data-isotope-group="gallery" href="#">BLACK AND WHITE</a></li>
+                </ul>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="box-images box-images-variant-3">
-                <div class="box-images-item" data-parallax-scroll="{&quot;y&quot;: -20,   &quot;smoothness&quot;: 30 }"><img src="images/overview-1-470x282.jpg" alt="" width="470" height="282"/>
+            <!-- Isotope Content-->
+            <div class="col-lg-12">
+              <div class="isotope row row-condensed no-gutters justify-content-lg-center" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group" data-column-class=".col-sm-6.col-lg-4">
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-4"><a class="gallery-item" data-lightgallery="item" href="images/gallery-1-800x1200.jpg"><img src="images/gallery-1-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Black and gray</span><span class="gallery-item-button"></span></a>
                 </div>
-                <div class="box-images-item box-images-without-border" data-parallax-scroll="{&quot;y&quot;: 40,  &quot;smoothness&quot;: 30 }"><img src="images/overview-2-470x282.jpg" alt="" width="470" height="282"/>
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-3"><a class="gallery-item" data-lightgallery="item" href="images/gallery-2-800x1200.jpg"><img src="images/gallery-2-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Classic Americana</span><span class="gallery-item-button"></span></a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section parallax-container" data-parallax-img="images/parallax-04-1920x1320.jpg">
-        <div class="parallax-content section-lg context-dark text-center section-filter-dark">
-          <div class="container">
-            <h2>Video Presentation</h2>
-            <p class="block-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-          </div>
-          <div class="container">
-            <div class="box-video-button" data-lightgallery="group"><a class="button-play" data-lightgallery="item" href="https://www.youtube.com/watch?v=rwobabHZnTE"><span class="icon fa-play"></span></a></div>
-          </div>
-        </div>
-      </section>
-      <section class="section section-md bg-default text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-7">
-              <h2>Our Professional Team</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Vestibulum bibendum elit cursus dapibus maximus. Maecenas sapien urna, cursus ut turpis non, gravida vehicula nisl.</p>
-            </div>
-          </div>
-          <div class="row row-40">
-            <div class="col-12">
-              <!-- Owl Carousel-->
-              <div class="owl-carousel carousel-creative" data-items="1" data-lg-items="3" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-4-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sarah Peterson</a></h4>
-                    <p>Founder, Senior Tattoo Artist</p>
-                  </div>
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-2"><a class="gallery-item" data-lightgallery="item" href="images/gallery-3-800x1200.jpg"><img src="images/gallery-3-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Minimalism</span><span class="gallery-item-button"></span></a>
                 </div>
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-2-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sam Williams</a></h4>
-                    <p>Junior Tattoo Artist</p>
-                  </div>
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-1"><a class="gallery-item" data-lightgallery="item" href="images/gallery-5-800x1200.jpg"><img src="images/gallery-5-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Blackwork</span><span class="gallery-item-button"></span></a>
                 </div>
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-1-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Mary Lucas</a></h4>
-                    <p>Tattoo Artist</p>
-                  </div>
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-2"><a class="gallery-item" data-lightgallery="item" href="images/gallery-6-1200x800.jpg"><img src="images/gallery-6-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Surrealism</span><span class="gallery-item-button"></span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-3"><a class="gallery-item" data-lightgallery="item" href="images/gallery-4-800x1200.jpg"><img src="images/gallery-4-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">New School</span><span class="gallery-item-button"></span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-2"><a class="gallery-item" data-lightgallery="item" href="images/gallery-7-800x1200.jpg"><img src="images/gallery-7-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Japanese</span><span class="gallery-item-button"></span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-1"><a class="gallery-item" data-lightgallery="item" href="images/gallery-8-800x1200.jpg"><img src="images/gallery-8-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Portraiture</span><span class="gallery-item-button"></span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 isotope-item" data-filter="filter-2"><a class="gallery-item" data-lightgallery="item" href="images/gallery-9-1200x800.jpg"><img src="images/gallery-9-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Realism</span><span class="gallery-item-button"></span></a>
                 </div>
               </div>
-            </div>
-            <div class="col-12"><a class="button button-primary" href="our-team.html">View all team</a></div>
-          </div>
-        </div>
-      </section>
-      <section class="section section-md bg-primary text-center">
-        <div class="container"> 
-          <div class="row justify-content-md-center row-30 row-lg-40">
-            <div class="col-md-9 col-lg-8">
-              <h2>Subscribe to the Newsletter</h2>
-              <p class="big">Be the first to know about our promotions and discounts!</p>
-            </div>
-            <div class="col-md-9 col-lg-6">
-              <!-- RD Mailform-->
-              <form class="rd-form rd-mailform rd-form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <input class="form-input" id="subscribe-form-0-email" type="email" name="email" data-constraints="@Email @Required"/>
-                  <label class="form-label" for="subscribe-form-0-email">Your E-mail</label>
-                </div>
-                <div class="form-button">
-                  <button class="button button-primary" type="submit">Subscribe</button>
-                </div>
-              </form>
             </div>
           </div>
         </div>
@@ -299,13 +224,13 @@
             <div class="col-lg-10">
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="overview.html">About</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.html">Portfolio</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.html">Testimonials</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.html">Appointment</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a></li>
                 </ul>
               </div>
             </div>
@@ -316,10 +241,10 @@
         <div class="container">
           <div class="row row-20 align-items-lg-center">
             <div class="col-md-3 text-md-left">
-              <div class="footer-brand"><a href="index.html"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+              <div class="footer-brand"><a href="index.php"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
             </div>
             <div class="col-md-6">
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.php">Privacy Policy</a></p>
             </div>
           </div>
         </div>

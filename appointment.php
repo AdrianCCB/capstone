@@ -1,8 +1,7 @@
-
 <!-- Page Title--><!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Our Team</title>
+    <title>Make an Appointment</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,32 +68,32 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="overview.html">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.html">Overview</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Our Team</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.html">Portfolio</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
                         <!-- RD Navbar Dropdown
                         <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
                         </ul>
                       </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.html">Testimonials</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
                         <!-- RD Navbar Dropdown-->
                         <!-- <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
@@ -138,9 +137,9 @@
                           </li>
                         </ul>
                       </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.html">Appointment</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>
                       </li>
                     </ul>
                   </div>
@@ -152,166 +151,85 @@
       </header>
       <section class="section-page-title context-dark" style="background-image: url(images/page-title-1920x427.jpg); background-size: cover;">
         <div class="container">
-          <h1 class="page-title">Our Team</h1>
+          <h1 class="page-title">Make an Appointment</h1>
         </div>
       </section>
       <section class="breadcrumbs-custom">
         <div class="container">
           <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li class="active">Our Team</li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li class="active">Make an Appointment</li>
           </ul>
         </div>
       </section>
       <section class="section section-lg bg-default text-center">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-9">
-              <h2>Meet Our Founders</h2>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <div class="col-md-9 col-xl-7">
+              <h2>Make an Appointment</h2>
+              <p>The best way to enjoy a treatment at our salon is to book an appointment with the desired tattoo artist. Fill in the form below and we will contact you to discuss your appointment.</p>
             </div>
           </div>
-          <div class="row row-30 justify-content-center">
-            <div class="col-md-6 col-lg-4">
-              <div class="team-corporate">
-                <figure class="team-corporate-img"><img src="images/home-3-2-310x280.jpg" alt="" width="310" height="280"/>
-                </figure>
-                <div class="team-corporate-caption">
-                  <h4 class="team-corporate-title"><a href="barry-profile.html">Barry</a></h4>
-                  <p>CO-Founder, Senior Tattoo Artist</p>
-                  <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">info@demolink.org</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="team-corporate">
-                <figure class="team-corporate-img"><img src="images/home-3-3-310x280.jpg" alt="" width="310" height="280"/>
-                </figure>
-                <div class="team-corporate-caption">
-                  <h4 class="team-corporate-title"><a href="team-member-profile.html">Jack</a></h4>
-                  <p>Founder, Senior Tattoo Artist</p>
-                  <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">info@demolink.org</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="team-corporate">
-                <figure class="team-corporate-img"><img src="images/adrian-310x280.jpg" alt="" width="310" height="280"/>
-                </figure>
-                <div class="team-corporate-caption">
-                  <h4 class="team-corporate-title"><a href="adrian-profile.html">Adrian</a></h4>
-                  <p>CO-Founder, Senior Tattoo Artist</p>
-                  <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">info@demolink.org</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- <section class="section section-md bg-default text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2>Our Professional Team</h2>
-              <p class="block-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Vestibulum bibendum elit cursus dapibus maximus. Maecenas sapien urna, cursus ut turpis non, gravida vehicula nisl.</p>
-            </div>
-          </div>
-          <div class="row row-50">
-            <div class="col-12"> -->
-              <!-- Owl Carousel-->
-              <!-- <div class="owl-carousel carousel-creative" data-items="1" data-lg-items="3" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-4-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sarah Peterson</a></h4>
-                    <p>Founder, Senior Tattoo Artist</p>
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-xl-8">
+              <!-- RD Mailform-->
+              <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <div class="row row-20 row-gutters-16 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-name">Your Name</label>
+                      <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-email">Your E-mail</label>
+                      <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-phone">Your Phone</label>
+                      <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric @Required">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <!--Select 2-->
+                    <select class="form-input select-filter" data-placeholder="Select a service.." data-minimum-results-for-search="Infinity" data-minimum-results-search="-1" data-constraints="@Required">
+                      <option label="1"></option>
+                      <option value="2">Tattooing</option>
+                      <option value="3">Piercing</option>
+                      <option value="4">Tattoo cover up</option>
+                      <option value="5">Tattoo design</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-wrap">
+                      <label class="form-label" for="date">Date Time</label>
+                      <input class="form-input" id="date" type="text" name="date" data-time-picker="date" data-constraints="@Required">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <select class="form-input select-filter" data-placeholder="Select an artist..." data-minimum-results-for-search="Infinity" data-minimum-results-search="-1" data-constraints="@Required">
+                      <option label="1"></option>
+                      <option value="2">Sarah Peterson</option>
+                      <option value="3">Sam Williams</option>
+                      <option value="4">Mary Lucas</option>
+                      <option value="5">Peter Adams</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-message">Your comment</label>
+                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                    </div>
                   </div>
                 </div>
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-2-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sam Williams</a></h4>
-                    <p>Junior Tattoo Artist</p>
-                  </div>
+                <div class="form-button group-sm text-center">
+                  <button class="button button-primary" type="submit">make an appointment now</button>
                 </div>
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-1-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Mary Lucas</a></h4>
-                    <p>Tattoo Artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <section class="section section-lg bg-gray-100">
-        <div class="container">
-          <div class="row row-50">
-            <div class="col-sm-6 col-lg-3 text-center text-lg-left">
-              <h2>Our Staff</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum elit cursus </p>
-              <div class="quote-with-image">
-                <div class="quote-caption">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="88.34px" height="65.34px" viewBox="0 0 88.34 65.34" enable-background="new 0 0 88.34 65.34" overflow="scroll" xml:space="preserve" preserveAspectRatio="none">
-                    <path d="M49.394,65.34v-4.131c12.318-7.088,19.924-16.074,22.811-26.965c-3.125,2.032-5.968,3.051-8.526,3.051																							c-4.265,0-7.864-1.721-10.803-5.168c-2.937-3.444-4.407-7.654-4.407-12.64c0-5.511,1.932-10.142,5.791-13.878																							C58.123,1.873,62.873,0,68.51,0c5.639,0,10.354,2.379,14.143,7.137c3.793,4.757,5.688,10.678,5.688,17.758																							c0,9.977-3.814,18.912-11.443,26.818C69.268,59.613,60.101,64.156,49.394,65.34z M0.923,65.34v-4.131																							c12.321-7.088,19.926-16.074,22.813-26.965c-3.126,2.032-5.993,3.051-8.598,3.051c-4.219,0-7.794-1.721-10.734-5.168																							C1.467,28.683,0,24.473,0,19.487C0,13.976,1.919,9.346,5.757,5.609C9.595,1.873,14.334,0,19.971,0																							c5.685,0,10.41,2.379,14.178,7.137c3.767,4.757,5.652,10.678,5.652,17.758c0,9.977-3.805,18.912-11.409,26.818																							C20.787,59.613,11.632,64.156,0.923,65.34z"></path>
-                  </svg>
-                  <h3 class="quote-text">True beauty gives confidence!</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-9">
-              <!-- <p class="text-center text-lg-right"><a class="button-link button-link-icon" href="our-team.html">View All Team <span class="icon fa-arrow-right"></span></a></p> -->
-              <!-- Owl Carousel-->
-              <div class="owl-carousel carousel-inset" data-items="1" data-lg-items="3" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-1-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Mary Lucas</a></h4>
-                    <p>Tattoo Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-2-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sam Williams</a></h4>
-                    <p>Junior Tattoo Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">George Adams</a></h4>
-                    <p>Receptionist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/adrian-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="adrian-profile.html">Adrian</a></h4>
-                    <p>Artist 1</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">George Adams</a></h4>
-                    <p>Artist 2</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">George Adams</a></h4>
-                    <p>Artist 3</p>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -332,13 +250,13 @@
             <div class="col-lg-10">
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="overview.html">About</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.html">Portfolio</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.html">Testimonials</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.html">Appointment</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="gallery-without-padding.php">Portfolio</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="appointment.php">Appointment</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a></li>
                 </ul>
               </div>
             </div>
@@ -349,10 +267,10 @@
         <div class="container">
           <div class="row row-20 align-items-lg-center">
             <div class="col-md-3 text-md-left">
-              <div class="footer-brand"><a href="index.html"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+              <div class="footer-brand"><a href="index.php"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
             </div>
             <div class="col-md-6">
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.php">Privacy Policy</a></p>
             </div>
           </div>
         </div>
