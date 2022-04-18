@@ -204,7 +204,7 @@
                 <div class="icon-modern"><img src="images/icon-01-80x80.png" alt="" width="80" height="80"/>
                 </div>
                 <h4 class="box-icon-modern-title"><a href="services.php">Tattooing</a></h4>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                <p>At our tattoo studio, we combine modern technics with traditional ones for a premium result</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -212,7 +212,7 @@
                 <div class="icon-modern"><img src="images/icon-02-80x80.png" alt="" width="80" height="80"/>
                 </div>
                 <h4 class="box-icon-modern-title"><a href="services.php">Piercing</a></h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                <p>Want some extra holes in your body? Our piercing masters will make some for you.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -220,7 +220,7 @@
                 <div class="icon-modern"><img src="images/icon-03-80x80.png" alt="" width="80" height="80"/>
                 </div>
                 <h4 class="box-icon-modern-title"><a href="services.php">Tattoo cover up</a></h4>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                <p>Got some old tattoos that you don’t find pretty? Our talented artists will cover them up for you.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -228,7 +228,7 @@
                 <div class="icon-modern"><img src="images/icon-04-80x80.png" alt="" width="80" height="80"/>
                 </div>
                 <h4 class="box-icon-modern-title"><a href="services.php">Tattoo design</a></h4>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                <p>Nothing can beat the challenge of creating a design that initially is only in your imagination.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -236,7 +236,7 @@
                 <div class="icon-modern"><img src="images/icon-05-80x80.png" alt="" width="80" height="80"/>
                 </div>
                 <h4 class="box-icon-modern-title"><a href="services.php">Permanent makeup</a></h4>
-                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.</p>
+                <p>Permanent makeup is a cosmetic technique which employs tattoos as a means of producing designs.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -244,7 +244,7 @@
                 <div class="icon-modern"><img src="images/icon-06-80x80.png" alt="" width="80" height="80"/>
                 </div>
                 <h4 class="box-icon-modern-title"><a href="services.php">Laser removal</a></h4>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.</p>
+                <p>Laser tattoo removal offers an effective solution to your unwanted tattoos as a simple outpatient procedure.</p>
               </article>
             </div>
           </div>
