@@ -161,7 +161,7 @@
                 <div class="row">
                   <div class="col-sm-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>Reliable & affordable</span><span class="title-big">TATTOO SERVICES</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to Inkvo, a leading tattoo studio providing top-notch tattooing services. We love to give the opportunity to all tattoo lovers to enjoy a wider range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to J.A.B Ink Studio, a leading tattoo studio providing top-notch tattooing services. We love to give the opportunity to all tattoo lovers to enjoy a wider range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@
                 <div class="row">
                   <div class="col-md-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>100% safe & painless</span><span class="title-big">TATTOOING</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">At Inkvo, we guarantee safe tattooing at any of our salons. Even if you haven’t had any tattoos yet, rest assured that our artists will minimize any negative impressions from your first-time tattoo. We wil also take care of all healing procedures depending on your skin type.</p><a class="button button-primary" href="testimonials.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">At J.A.B Ink Studio, we guarantee safe tattooing at any of our salons. Even if you haven’t had any tattoos yet, rest assured that our artists will minimize any negative impressions from your first-time tattoo. We wil also take care of all healing procedures depending on your skin type.</p><a class="button button-primary" href="testimonials.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -231,8 +231,8 @@
         <div class="container">
           <div class="row justify-content-md-end">
             <div class="col-lg-6 col-xl-5">
-              <h2>A few words about our tattoo salon</h2>
-              <p class="big text-gray-800">We have been numerously recognized as #1 tattoo salon in Los Angeles. We aim to deliver the best tattooing services.</p>
+              <h2>A few words about our studio</h2>
+              <p class="big text-gray-800">We have been numerously recognized as #1 tattoo studio in Singapore. We aim to deliver the best tattooing services.</p>
               <p class="text-spacing-60">Our staff consistently upgrades their ability and knowledge through training and seminars to ensure your tattoo or piercing is performed using the latest industry standards.</p><a class="button button-primary" href="overview.php">learn more</a>
             </div>
           </div>
@@ -245,8 +245,8 @@
               <div class="row row-50 row-lg-70">
                 <div class="col-md-6 col-lg-12">
                   <h2>Our advantages</h2>
-                  <p class="big text-gray-800">For over 10 years of constant improvement, we have become one of the most successful tattoo salons. Here’s why people choose us.</p>
-                  <p>Continuous learning and advanced training is essential in the tattoo industry. That’s why constant evolving and new products and techniques are vitally important to our staff. Every tattoo artist at Inkvo works on their skills and creativity. We are also dedicated to delivering you the best possible result at an affordable price.</p>
+                  <p class="big text-gray-800">For over 10 years of constant improvement, we have become one of the most successful tattoo studio. Here’s why people choose us.</p>
+                  <p>Continuous learning and advanced training is essential in the tattoo industry. That’s why constant evolving and new products and techniques are vitally important to our staff. Every tattoo artist at J.A.B Ink Studio works on their skills and creativity. We are also dedicated to delivering you the best possible result at an affordable price.</p>
                 </div>
                 <div class="col-md-6 col-lg-12">
                   <div class="quote-with-image">
@@ -267,7 +267,7 @@
                 <div class="col-md-6 col-lg-12">
                   <figure class="block-image"><img src="images/home-1-9-541x369.jpg" alt="" width="541" height="369"/>
                   </figure>
-                  <p>Every artist at Inkvo understands that safety always comes first. That’s why the team of our salon uses only the best tattoing equipment and consumables. Moreover, we guarantee 100% sterility and complete medical care in each and after each procedure. Tattoo artists at our salon will make every effort to provide you with a painless experience.</p>
+                  <p>Every artist at J.A.B Ink Studio understands that safety always comes first. That’s why the team of our studio uses only the best tattoing equipment and consumables. Moreover, we guarantee 100% sterility and complete medical care in each and after each procedure. Tattoo artists at our studio will make every effort to provide you with a painless experience.</p>
                 </div>
                 <div class="col-md-6 col-lg-12">
                   <div class="box-video" data-lightgallery="group"><img src="images/home-1-8-541x369.jpg" alt="" width="541" height="369"/><a class="button-play" data-lightgallery="item" href="https://www.youtube.com/watch?v=m10Vl9TXpec"></a>
@@ -283,7 +283,7 @@
           <div class="row justify-content-center">
             <div class="col-md-9 col-lg-7">
               <h2>Our Services</h2>
-              <p>We provide a wide variety of tattooing services to both regular and new clients. At Inkvo, you can expect first-class treatment as well as 100% safe and sterile environment & equipment.</p>
+              <p>We provide a wide variety of tattooing services to both regular and new clients. At J.A.B Ink Studio, you can expect first-class treatment as well as 100% safe and sterile environment & equipment.</p>
             </div>
           </div>
           <div class="row icon-modern-list no-gutters">
@@ -292,7 +292,7 @@
                 <div class="icon-modern"><img src="images/icon-01-80x80.png" alt="" width="80" height="80"/>
                 </div>
                 <h4 class="box-icon-modern-title"><a href="services.php">Tattooing</a></h4>
-                <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
+                <p>At our tattoo studio, we combine modern technics with traditional ones for a premium result.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -359,7 +359,7 @@
       <section class="section section-lg bg-default text-center">
         <div class="container">
           <h2>Our amazing artists</h2>
-          <p class="block-lg">Inkvo has a team of talented and highly creative artists whose main goal is not just to keep you satisfied but also impress you with a unique art that will help you stand out from the crowd. The experience and unmatched skills of our tattooists are reasons of our salon’s success.</p>
+          <p class="block-lg">J.A.B Ink Studio has a team of talented and highly creative artists whose main goal is not just to keep you satisfied but also impress you with a unique art that will help you stand out from the crowd. The experience and unmatched skills of our tattooists are reasons of our studio’s success.</p>
         </div>
         <div class="container">
           <div class="row row-20">
@@ -405,7 +405,7 @@
           <div class="row justify-content-center">
             <div class="col-md-10 col-xl-9">
               <h2>Portfolio</h2>
-              <p>Our salon provides tattoos of various complexity. From simple to highly creative artworks, we gather all our achievements in the portfolio. Feel free to take a look at the gallery below to discover our best works.</p>
+              <p>Our studio provides tattoos of various complexity. From simple to highly creative artworks, we gather all our achievements in the portfolio. Feel free to take a look at the gallery below to discover our best works.</p>
             </div>
           </div>
           <div class="row row-30">
@@ -526,7 +526,7 @@
               <div class="block-xs"> 
                 <h2>Testimonials of Our Clients</h2>
                 <p class="big text-gray-800">Thanks to our clients’ regular reviews, testimonials, and comments, we are able to improve our studio.</p>
-                <p>Unlike other studios, we prefer to maintain a constant connection with our customers and receive feedback on every service, whether it’s a simple tattoo or a permanent makeup service. If you’ve already visited Inkvo, feel free to contact us and send your testimonial.</p>
+                <p>Unlike other studios, we prefer to maintain a constant connection with our customers and receive feedback on every service, whether it’s a simple tattoo or a permanent makeup service. If you’ve already visited J.A.B Ink Studio, feel free to contact us and send your testimonial.</p>
               </div>
             </div>
             <div class="col-lg-6">
@@ -539,7 +539,7 @@
                   </div>
                   <div class="quote-body">
                     <div class="quote-text">
-                      <p>I visited Inkvo about a month ago to get a tattoo. The salon has a very laid-back atmosphere while also staying very professional. Everyone was very nice and welcoming. James is not just an awesome artist, but a pretty cool guy to hang out with while getting tattooed.</p>
+                      <p>I visited J.A.B Ink Studio about a month ago to get a tattoo. The salon has a very laid-back atmosphere while also staying very professional. Everyone was very nice and welcoming. James is not just an awesome artist, but a pretty cool guy to hang out with while getting tattooed.</p>
                     </div>
                     <svg class="quote-body-mark" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="66px" height="49px" viewbox="0 0 66 49" enable-background="new 0 0 66 49" xml:space="preserve">
                       <g></g>
@@ -573,7 +573,7 @@
                   </div>
                   <div class="quote-body">
                     <div class="quote-text">
-                      <p>Inkvo  is a place where you can get a high-quality tattoo, and even order a custom design based on your wishes and expectations. This is exactly what I received during my first visit to the salon, and I will certainly come here again to have another tattoo done.</p>
+                      <p>J.A.B Ink Studio is a place where you can get a high-quality tattoo, and even order a custom design based on your wishes and expectations. This is exactly what I received during my first visit to the studio, and I will certainly come here again to have another tattoo done.</p>
                     </div>
                     <svg class="quote-body-mark" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="66px" height="49px" viewbox="0 0 66 49" enable-background="new 0 0 66 49" xml:space="preserve">
                       <g></g>
