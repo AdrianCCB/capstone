@@ -158,7 +158,7 @@
         <div class="container">
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.php">Home</a></li>
-            <li><a href="#">Pages</a></li>
+            <!-- <li><a href="#">Pages</a></li> -->
             <li class="active">Make an Appointment</li>
           </ul>
         </div>

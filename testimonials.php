@@ -159,7 +159,7 @@
         <div class="container">
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.php">Home</a></li>
-            <li><a href="#">About</a></li>
+            <!-- <li><a href="#">About</a></li> -->
             <li class="active">Testimonials</li>
           </ul>
         </div>
