@@ -39,7 +39,7 @@
                     <li>
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 1234 5678</a></div>
+                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
                       </div>
                     </li>
                     <li>
@@ -213,22 +213,22 @@
               <ul class="contact-list">
                 <li> 
                   <p class="contact-list-title">Address</p>
-                  <div class="contact-list-content"><span class="icon mdi mdi-map-marker icon-primary"></span><a href="#">Washington, USA 6036 Richmond hwy., Alexandria, VA, 2230 </a></div>
+                  <div class="contact-list-content"><span class="icon mdi mdi-map-marker icon-primary"></span><a href="#">545 Orchard Road Singapore 238882</a></div>
                 </li>
                 <li>
                   <p class="contact-list-title">Phones</p>
-                  <div class="contact-list-content"><span class="icon mdi mdi-phone icon-primary"></span><a href="tel:#">+1 (409) 987–5874</a><span>, </span><a href="tel:#">+1(409) 987–5884 </a></div>
+                  <div class="contact-list-content"><span class="icon mdi mdi-phone icon-primary"></span><a href="tel:#">(+65) 6123–4567</a><span>, </span><a href="tel:#">(+65) 6765-4321 </a></div>
                 </li>
                 <li>
                   <p class="contact-list-title">E-mail</p>
-                  <div class="contact-list-content"><span class="icon mdi mdi-email-outline icon-primary"></span><a href="mailto:#">info@demolink.org</a></div>
+                  <div class="contact-list-content"><span class="icon mdi mdi-email-outline icon-primary"></span><a href="mailto:#">jabinkstudio@demolink.org</a></div>
                 </li>
                 <li>
                   <p class="contact-list-title">Opening Hours</p>
                   <div class="contact-list-content"><span class="icon mdi mdi-clock icon-primary"></span>
                     <ul class="list-xs">
-                      <li>Mon-Fri: 9 am – 6 pm</li>
-                      <li>Saturday: 9 am – 4 pm</li>
+                      <li>Mon-Fri: 10 am – 8 pm</li>
+                      <li>Saturday: 10 am – 6 pm</li>
                       <li>Sunday: Closed</li>
                     </ul>
                   </div>

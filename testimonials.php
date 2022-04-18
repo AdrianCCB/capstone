@@ -39,7 +39,7 @@
                     <li>
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 1234 5678</a></div>
+                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
                       </div>
                     </li>
                     <li>
@@ -164,13 +164,13 @@
           </ul>
         </div>
       </section>
-      <section class="section section-lg bg-default text-center">
+      <!-- <section class="section section-lg bg-default text-center">
         <div class="container">
           <h2>Testimonials</h2>
         </div>
-        <div class="container">
+        <div class="container"> -->
           <!-- Owl Carousel-->
-          <div class="owl-carousel carousel-two-column" data-items="1" data-lg-items="2" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
+          <!-- <div class="owl-carousel carousel-two-column" data-items="1" data-lg-items="2" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
             <div class="quote-corporate">
               <div class="quote-header">
                 <h4>Jennifer Moreno</h4>
@@ -212,7 +212,7 @@
               </div>
               <div class="quote-body">
                 <div class="quote-text">
-                  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam.</p>
+                  <p>I visited J.A.B Ink Studio about a month ago to get a tattoo. The salon has a very laid-back atmosphere while also staying very professional. Everyone was very nice and welcoming. James is not just an awesome artist, but a pretty cool guy to hang out with while getting tattooed.</p>
                 </div>
                 <svg class="quote-body-mark" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="66px" height="49px" viewbox="0 0 66 49" enable-background="new 0 0 66 49" xml:space="preserve">
                   <g></g>
@@ -224,7 +224,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="section parallax-container" data-parallax-img="images/parallax-03-1920x1340.jpg">
         <div class="parallax-content section-lg text-center section-filter-white">
           <div class="container">
@@ -237,7 +237,7 @@
                     <g></g>
                     <path d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288									c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407									C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669									c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098									c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876									C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352									c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z"></path>
                   </svg>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi archite beatae vitae dicta sunt explicabo enim ipsam voluptatem quia voluptas.</p>
+                  <p>J.A.B Ink Studio is a place where you can get a high-quality tattoo, and even order a custom design based on your wishes and expectations. This is exactly what I received during my first visit to the studio, and I will certainly come here again to have another tattoo done.</p>
                 </div>
                 <div class="quote-modern-caption">
                   <figure class="quote-modern-img"><img src="images/home-1-10-90x90.jpg" alt="" width="90" height="90"/>
@@ -252,7 +252,7 @@
                     <g></g>
                     <path d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288									c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407									C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669									c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098									c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876									C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352									c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z"></path>
                   </svg>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet bibendum nisl. Etiam id quam a quam pellentesque interdum vel at risus. Curabitur tempor porttitor egestas. Nullam scelerisque pellentesque metus, at iaculis ligula finibus sed. </p>
+                  <p>If there is a place in my city where I would like to be tattooed next time, it is your tattoo studio. You guys are doing amazing job spreading the quality tattoos in the area, and I really like what you do! I will definitely tell my friends about your studio and your artists!</p>
                 </div>
                 <div class="quote-modern-caption">
                   <figure class="quote-modern-img"><img src="images/home-1-11-90x90.jpg" alt="" width="90" height="90"/>
@@ -267,7 +267,7 @@
                     <g></g>
                     <path d="M36.903,49v-3.098c9.203-5.315,14.885-12.055,17.042-20.222c-2.335,1.524-4.459,2.288-6.37,2.288									c-3.186,0-5.875-1.29-8.071-3.876c-2.194-2.583-3.293-5.74-3.293-9.479c0-4.133,1.443-7.605,4.327-10.407									C43.425,1.405,46.973,0,51.185,0c4.213,0,7.735,1.784,10.566,5.352C64.585,8.919,66,13.359,66,18.669									c0,7.482-2.85,14.183-8.549,20.112C51.751,44.706,44.902,48.112,36.903,49z M0.69,49v-3.098									c9.205-5.315,14.887-12.055,17.044-20.222c-2.335,1.524-4.478,2.288-6.423,2.288c-3.152,0-5.823-1.29-8.02-3.876									C1.096,21.51,0,18.353,0,14.614c0-4.133,1.434-7.605,4.301-10.407C7.168,1.405,10.709,0,14.92,0c4.247,0,7.778,1.784,10.592,5.352									c2.814,3.567,4.223,8.007,4.223,13.317c0,7.482-2.843,14.183-8.524,20.112C15.53,44.706,8.69,48.112,0.69,49z"></path>
                   </svg>
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt.</p>
+                  <p>I visited J.A.B Ink Studio about a month ago to get a tattoo. The salon has a very laid-back atmosphere while also staying very professional. Everyone was very nice and welcoming. James is not just an awesome artist, but a pretty cool guy to hang out with while getting tattooed.</p>
                 </div>
                 <div class="quote-modern-caption">
                   <figure class="quote-modern-img"><img src="images/home-1-12-90x90.jpg" alt="" width="90" height="90"/>
@@ -280,11 +280,11 @@
           </div>
         </div>
       </section>
-      <section class="section section-lg bg-default text-center">
+      <!-- <section class="section section-lg bg-default text-center">
         <div class="container">
-          <h2>Client Stories</h2>
+          <h2>Client Stories</h2> -->
           <!-- Owl Carousel-->
-          <div class="owl-carousel" data-items="1" data-lg-items="3" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
+          <!-- <div class="owl-carousel" data-items="1" data-lg-items="3" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
             <div class="quote-corporate quote-corporate-center-img">
               <div class="quote-header">
                 <h4>Jennifer Moreno</h4>
@@ -338,7 +338,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Page Footer-->
       <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
       <!--Please note that YOUR_API_KEY should replaced with your key.-->

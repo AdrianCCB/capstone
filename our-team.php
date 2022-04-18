@@ -39,7 +39,7 @@
                     <li>
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 1234 5678</a></div>
+                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
                       </div>
                     </li>
                     <li>
@@ -169,7 +169,7 @@
           <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
               <h2>Meet Our Founders</h2>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <p>3 Trios come together and start the J.A.B Ink Studio to help all tattoos lovers</p>
             </div>
           </div>
           <div class="row row-30 justify-content-center">
@@ -181,7 +181,7 @@
                   <h4 class="team-corporate-title"><a href="barry-profile.php">Barry</a></h4>
                   <p>CO-Founder, Senior Tattoo Artist</p>
                   <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">info@demolink.org</a></div>
+                  <div class="team-corporate-link"><a href="mailto:#">barry@demolink.org</a></div>
                 </div>
               </div>
             </div>
@@ -193,7 +193,7 @@
                   <h4 class="team-corporate-title"><a href="team-member-profile.php">Jack</a></h4>
                   <p>Founder, Senior Tattoo Artist</p>
                   <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">info@demolink.org</a></div>
+                  <div class="team-corporate-link"><a href="mailto:#">jack@demolink.org</a></div>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@
                   <h4 class="team-corporate-title"><a href="adrian-profile.php">Adrian</a></h4>
                   <p>CO-Founder, Senior Tattoo Artist</p>
                   <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">info@demolink.org</a></div>
+                  <div class="team-corporate-link"><a href="mailto:#">adrian@demolink.org</a></div>
                 </div>
               </div>
             </div>
@@ -294,21 +294,21 @@
                   <figure><img src="images/adrian-370x370.jpg" alt="" width="370" height="370"></figure>
                   <div class="team-minimal-caption">
                     <h4 class="team-title"><a href="adrian-profile.php">Adrian</a></h4>
-                    <p>Artist 1</p>
+                    <p>Senior Tatto Artist</p>
                   </div>
                 </div>
                 <div class="team-minimal team-minimal-type-2">
                   <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
                   <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">George Adams</a></h4>
-                    <p>Artist 2</p>
+                    <h4 class="team-title"><a href="team-member-profile.php">Barry</a></h4>
+                    <p>Senior Tatto Artist</p>
                   </div>
                 </div>
                 <div class="team-minimal team-minimal-type-2">
                   <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
                   <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">George Adams</a></h4>
-                    <p>Artist 3</p>
+                    <h4 class="team-title"><a href="team-member-profile.php">Jack</a></h4>
+                    <p>Senior Tatto Artist</p>
                   </div>
                 </div>
               </div>

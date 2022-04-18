@@ -39,7 +39,7 @@
                     <li>
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 1234 5678</a></div>
+                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
                       </div>
                     </li>
                     <li>
@@ -159,15 +159,15 @@
         <div class="container">
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.php">Home</a></li>
-            <li><a href="grid-gallery.php">Gallery</a></li>
-            <li class="active">Gallery without padding</li>
+            <!-- <li><a href="grid-gallery.php">Gallery</a></li> -->
+            <li class="active">Portfolio</li>
           </ul>
         </div>
       </section>
       <section class="section section-lg bg-default text-center">
         <div class="container">
-          <h2>Gallery without padding</h2>
-          <p class="block-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <h2>Porfolio</h2>
+          <p class="block-lg">Our studio provides tattoos of various complexity. From simple to highly creative artworks, we gather all our achievements in the portfolio. Feel free to take a look at the gallery below to discover our best works.</p>
           <div class="row row-30">
             <!-- Isotope Filters-->
             <div class="col-lg-12">

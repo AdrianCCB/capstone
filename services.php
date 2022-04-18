@@ -39,7 +39,7 @@
                     <li>
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 1234 5678</a></div>
+                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
                       </div>
                     </li>
                     <li>
@@ -169,8 +169,8 @@
             <div class="col-lg-6">
               <div class="block-xs">
                 <h2>Why Our Clients  Choose Us</h2>
-                <p class="big text-gray-800">Cras ut vestibulum tortor. In in nisi sit amet metus varius pulvinar in vitae ipsum nec mi sollicitudin luctus aliquet a, accumsan.</p>
-                <p>In ante sapien, dapibus luctus aliquet a, accumsan sit amet dolor. Mauris id facilisis dolor. Donec malesuada, est eu dignissim eleifend, est nulla dignissim nisl, a facilisis ipsum.</p><a class="button button-primary" href="appointment.php">Book Now</a>
+                <p class="big text-gray-800">For over 10 years of constant improvement, we have become one of the most successful tattoo studio. Here’s why people choose us.</p>
+                <p>Continuous learning and advanced training is essential in the tattoo industry. That’s why constant evolving and new products and techniques are vitally important to our staff. Every tattoo artist at J.A.B Ink Studio works on their skills and creativity.</p><a class="button button-primary" href="appointment.php">Book Now</a>
               </div>
             </div>
             <div class="col-lg-6">
@@ -195,7 +195,7 @@
           <div class="row justify-content-center">
             <div class="col-md-9 col-lg-7">
               <h2>Our Services</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum elit cursus dapibus maximus. Cras ut vestibulum tortor. In in nisi sit amet metus varius pulvinar in vitae ipsum.</p>
+              <p>We provide a wide variety of tattooing services to both regular and new clients. At J.A.B Ink Studio, you can expect first-class treatment as well as 100% safe and sterile environment & equipment.</p>
             </div>
           </div>
           <div class="row icon-modern-list no-gutters">

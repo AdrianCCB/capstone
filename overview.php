@@ -39,7 +39,7 @@
                     <li>
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 1234 5678</a></div>
+                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
                       </div>
                     </li>
                     <li>
@@ -170,8 +170,8 @@
             <div class="col-lg-6">
               <div class="block-xs">
                 <h2>Who We Are</h2>
-                <p class="big text-gray-800">Cras ut vestibulum tortor. In in nisi sit amet metus varius pulvinar in vitae ipsum nec mi sollicitudin Fusce turpis massa,</p>
-                <p>In ante sapien, dapibus luctus aliquet a, accumsan sit amet dolor. Mauris id facilisis dolor. Donec malesuada, est eu dignissim eleifend, est nulla dignissim nisl. Fusce turpis massa, mattis sit.</p>
+                <p class="big text-gray-800">We are a group of Tatoo artist who are passionate giving the most unique designs and services to our client.</p>
+                <p>Our highly qualified team of tattooists is always ready to help you make even the wildest ideas come true. The level of our artists’ creativity & skills allows them to work on the most stunning artworks. Our team ensures that you will get what you want for you body to look exceptional.</p>
               </div>
               <div class="row row-30">
                 <div class="col-sm-6">
@@ -214,8 +214,8 @@
       <section class="section parallax-container" data-parallax-img="images/parallax-04-1920x1320.jpg">
         <div class="parallax-content section-lg context-dark text-center section-filter-dark">
           <div class="container">
-            <h2>Video Presentation</h2>
-            <p class="block-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <h2>REALISTIC WOLF & GEOMETRIC TATTOO TIME LAPSE</h2>
+            <p class="block-lg">One of them most unique design requested by our client and it was perfectly executed by our professional artist.</p>
           </div>
           <div class="container">
             <div class="box-video-button" data-lightgallery="group"><a class="button-play" data-lightgallery="item" href="https://www.youtube.com/watch?v=rwobabHZnTE"><span class="icon fa-play"></span></a></div>
@@ -227,7 +227,7 @@
           <div class="row justify-content-center">
             <div class="col-md-9 col-lg-7">
               <h2>Our Professional Team</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Vestibulum bibendum elit cursus dapibus maximus. Maecenas sapien urna, cursus ut turpis non, gravida vehicula nisl.</p>
+              <p>Our professional staffs are always listen and understand the needs of our client. They have unlimited of creativity to help you to achieve your desire.</p>
             </div>
           </div>
           <div class="row row-40">
