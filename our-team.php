@@ -46,6 +46,7 @@
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Opening Hours:</div>
                         <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
+                        <div class="unit-body"> Sat: 10am - 6pm</div>
                       </div>
                     </li>
                   </ul>
@@ -77,10 +78,9 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="overview.php">About</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="our-team.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
@@ -160,7 +160,7 @@
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.php">Home</a></li>
             <li><a href="#">About</a></li>
-            <li class="active">Our Team</li>
+            <li class="active">The Team</li>
           </ul>
         </div>
       </section>
@@ -168,32 +168,32 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
-              <h2>Meet Our Founders</h2>
-              <p>3 Trios come together and start the J.A.B Ink Studio to help all tattoos lovers</p>
+              <h2>Meet Our Artists</h2>
+              <p>With our powers combined, we bring you the best in tattooistry.</p>
             </div>
           </div>
           <div class="row row-30 justify-content-center">
             <div class="col-md-6 col-lg-4">
               <div class="team-corporate">
-                <figure class="team-corporate-img"><img src="images/home-3-2-310x280.jpg" alt="" width="310" height="280"/>
+                <figure class="team-corporate-img"><img src="images/Barrypf.png" alt="" width="310" height="280"/>
                 </figure>
                 <div class="team-corporate-caption">
                   <h4 class="team-corporate-title"><a href="barry-profile.php">Barry</a></h4>
                   <p>CO-Founder, Senior Tattoo Artist</p>
                   <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">barry@demolink.org</a></div>
+                  <div class="team-corporate-link"><a href="mailto:#">Barry@jabink.com</a></div>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="team-corporate">
-                <figure class="team-corporate-img"><img src="images/home-3-3-310x280.jpg" alt="" width="310" height="280"/>
+                <figure class="team-corporate-img"><img src="images/Jackpf.png" alt="" width="310" height="280"/>
                 </figure>
                 <div class="team-corporate-caption">
                   <h4 class="team-corporate-title"><a href="team-member-profile.php">Jack</a></h4>
                   <p>Founder, Senior Tattoo Artist</p>
                   <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">jack@demolink.org</a></div>
+                  <div class="team-corporate-link"><a href="mailto:#">Jack@jabink.com</a></div>
                 </div>
               </div>
             </div>
@@ -205,117 +205,14 @@
                   <h4 class="team-corporate-title"><a href="adrian-profile.php">Adrian</a></h4>
                   <p>CO-Founder, Senior Tattoo Artist</p>
                   <div class="divider"></div>
-                  <div class="team-corporate-link"><a href="mailto:#">adrian@demolink.org</a></div>
+                  <div class="team-corporate-link"><a href="mailto:#">Adrian@jabink.com</a></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- <section class="section section-md bg-default text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2>Our Professional Team</h2>
-              <p class="block-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Vestibulum bibendum elit cursus dapibus maximus. Maecenas sapien urna, cursus ut turpis non, gravida vehicula nisl.</p>
-            </div>
-          </div>
-          <div class="row row-50">
-            <div class="col-12"> -->
-              <!-- Owl Carousel-->
-              <!-- <div class="owl-carousel carousel-creative" data-items="1" data-lg-items="3" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-4-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sarah Peterson</a></h4>
-                    <p>Founder, Senior Tattoo Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-2-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Sam Williams</a></h4>
-                    <p>Junior Tattoo Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-with-shadow">
-                  <figure><img src="images/team-1-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.html">Mary Lucas</a></h4>
-                    <p>Tattoo Artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <section class="section section-lg bg-gray-100">
-        <div class="container">
-          <div class="row row-50">
-            <div class="col-sm-6 col-lg-3 text-center text-lg-left">
-              <h2>Our Staff</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum elit cursus </p>
-              <div class="quote-with-image">
-                <div class="quote-caption">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="88.34px" height="65.34px" viewBox="0 0 88.34 65.34" enable-background="new 0 0 88.34 65.34" overflow="scroll" xml:space="preserve" preserveAspectRatio="none">
-                    <path d="M49.394,65.34v-4.131c12.318-7.088,19.924-16.074,22.811-26.965c-3.125,2.032-5.968,3.051-8.526,3.051																							c-4.265,0-7.864-1.721-10.803-5.168c-2.937-3.444-4.407-7.654-4.407-12.64c0-5.511,1.932-10.142,5.791-13.878																							C58.123,1.873,62.873,0,68.51,0c5.639,0,10.354,2.379,14.143,7.137c3.793,4.757,5.688,10.678,5.688,17.758																							c0,9.977-3.814,18.912-11.443,26.818C69.268,59.613,60.101,64.156,49.394,65.34z M0.923,65.34v-4.131																							c12.321-7.088,19.926-16.074,22.813-26.965c-3.126,2.032-5.993,3.051-8.598,3.051c-4.219,0-7.794-1.721-10.734-5.168																							C1.467,28.683,0,24.473,0,19.487C0,13.976,1.919,9.346,5.757,5.609C9.595,1.873,14.334,0,19.971,0																							c5.685,0,10.41,2.379,14.178,7.137c3.767,4.757,5.652,10.678,5.652,17.758c0,9.977-3.805,18.912-11.409,26.818																							C20.787,59.613,11.632,64.156,0.923,65.34z"></path>
-                  </svg>
-                  <h3 class="quote-text">True beauty gives confidence!</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-9">
-              <!-- <p class="text-center text-lg-right"><a class="button-link button-link-icon" href="our-team.html">View All Team <span class="icon fa-arrow-right"></span></a></p> -->
-              <!-- Owl Carousel-->
-              <div class="owl-carousel carousel-inset" data-items="1" data-lg-items="3" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-1-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">Mary Lucas</a></h4>
-                    <p>Tattoo Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-2-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">Sam Williams</a></h4>
-                    <p>Junior Tattoo Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">George Adams</a></h4>
-                    <p>Receptionist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/adrian-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="adrian-profile.php">Adrian</a></h4>
-                    <p>Senior Tatto Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">Barry</a></h4>
-                    <p>Senior Tatto Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal team-minimal-type-2">
-                  <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">Jack</a></h4>
-                    <p>Senior Tatto Artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <!-- Page Footer-->
       <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
       <!--Please note that YOUR_API_KEY should replaced with your key.-->
@@ -333,7 +230,7 @@
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="overview.php">About</a></li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="our-team.php">About</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>

@@ -2,7 +2,7 @@
 <!-- Page Title--><!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Forms</title>
+    <title>Team Member Profile</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,7 @@
       <!-- Page Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
+        <div class="rd-navbar-wrap rd-navbar-wrap-absolute">
           <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
             <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
             <div class="rd-navbar-aside-outer rd-navbar-collapse">
@@ -38,13 +38,13 @@
                     <li>
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(073) 123-12-12</a></div>
+                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
                       </div>
                     </li>
                     <li>
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Opening Hours:</div>
-                        <div class="unit-body"> Mn-Fr: 10 am-8 pm</div>
+                        <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
                         <div class="unit-body"> Sat: 10am - 6pm</div>
                       </div>
                     </li>
@@ -69,40 +69,41 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-inverse-260x82.png" alt="" width="130" height="41"/></a></div>
+                  <!-- <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-inverse-260x82.png" alt="" width="130" height="41"/></a></div> -->
+                  <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="#">About</a>
-                        <!-- RD Navbar Dropdown-->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a>
+                        <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Our Team</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
+                          <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="grid-gallery.html">Gallery</a>
-                        <!-- RD Navbar Dropdown-->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
+                        <!-- RD Navbar Dropdown
                         <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
                         </ul>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="classic-blog.html">Blog</a>
+                      </li> -->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
                         <!-- RD Navbar Dropdown-->
-                        <ul class="rd-menu rd-navbar-dropdown">
+                        <!-- <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-without-sidebar.html">Blog Without Sidebar</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a></li>
-                        </ul>
+                        </ul> -->
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Pages</a>
-                        <!-- RD Navbar Megamenu-->
+                      <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
+                        RD Navbar Megamenu
                         <ul class="rd-menu rd-navbar-megamenu">
                           <li class="rd-megamenu-item">
                             <h6 class="rd-megamenu-title">Pages 1</h6>
@@ -136,8 +137,10 @@
                             </ul>
                           </li>
                         </ul>
+                      </li> -->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>
                       </li>
                     </ul>
                   </div>
@@ -149,7 +152,7 @@
       </header>
       <section class="section-page-title context-dark" style="background-image: url(images/page-title-1920x427.jpg); background-size: cover;">
         <div class="container">
-          <h1 class="page-title">Forms</h1>
+          <h1 class="page-title">Team Member Profile</h1>
         </div>
       </section>
       <section class="breadcrumbs-custom">
@@ -157,178 +160,58 @@
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Pages</a></li>
-            <li class="active">Forms</li>
+            <li class="active">Team Member Profile</li>
           </ul>
         </div>
       </section>
-      <!-- Forms-->
-      <section class="section section-md bg-default text-center">
+      <section class="section section-lg bg-default">
         <div class="container">
-          <h2>Forms</h2>
-          <div class="divider-lg"></div>
-          <p>With forms you can get almost any kind of information from  <br class="d-none d-md-inline">your visitors, who will definitely appreciate this attractive element.
-          </p>
-        </div>
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-md-9 col-lg-7 col-xl-6">
-              <h4 class="heading-title">Login form</h4>
-              <div class="group-sm group-sm-justify group-middle buttons-group"><a class="button button-facebook" href="#">Facebook</a><a class="button button-twitter" href="#">Twitter</a><a class="button button-google" href="#">Google+</a></div>
-              <div class="text-decoration-lines"><span class="text-decoration-lines-content">or</span></div>
-              <!-- RD Mailform-->
-              <form class="rd-form rd-mailform rd-form-centered form">
-                <div class="form-wrap">
-                  <label class="form-label form-label-outside" for="login-email">Username or E-mail</label>
-                  <input class="form-input" id="login-email" type="text" name="login" data-constraints="@Required">
+          <div class="row row-50">
+            <div class="col-lg-5 col-xl-4 text-center">
+              <div class="row row-30 row-lg-50">
+                <div class="col-12"><img class="img-shadow" src="images/team-1-370x370.jpg" alt="" width="370" height="370"/>
                 </div>
-                <div class="form-wrap">
-                  <label class="form-label form-label-outside" for="login-password">Password</label>
-                  <input class="form-input" id="login-password" type="password" name="password" data-constraints="@Required">
+                <div class="col-12"><a class="button button-primary" href="appointment.html">Make an appointment</a></div>
+                <div class="col-12">
+                  <ul class="list-inline social-list">
+                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-facebook" href="#"></a></li>
+                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-twitter" href="#"></a></li>
+                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-instagram" href="#"></a></li>
+                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-pinterest-p" href="#"></a></li>
+                  </ul>
                 </div>
-                <div class="form-wrap">
-                  <div class="form-wrap">
-                    <label class="checkbox-inline">
-                      <input name="input-group-radio" value="checkbox-1" type="checkbox">Remember Me 
-                    </label>
+              </div>
+            </div>
+            <div class="col-lg-7 col-xl-8">
+              <div class="box-team-info">
+                <div class="box-team-info-header">
+                  <h3>Barry</h3>
+                  <p>Tattoo Artist</p>
+                </div>
+                <p>While honing his architecture skills at the Massachusetts Institute of Technology (MIT), he discovered his passion for tattooing. Taking a massive leap of faith, he started his tattoing journey training under several big names such as Bang Bang and Paul Booth. Dark lines and geomatric patterns symbolises his work.</p>
+                <div class="quote-bordered">
+                  <div class="quote-caption">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="88.34px" height="65.34px" viewBox="0 0 88.34 65.34" enable-background="new 0 0 88.34 65.34" overflow="scroll" xml:space="preserve" preserveAspectRatio="none">
+                      <path d="M49.394,65.34v-4.131c12.318-7.088,19.924-16.074,22.811-26.965c-3.125,2.032-5.968,3.051-8.526,3.051																							c-4.265,0-7.864-1.721-10.803-5.168c-2.937-3.444-4.407-7.654-4.407-12.64c0-5.511,1.932-10.142,5.791-13.878																							C58.123,1.873,62.873,0,68.51,0c5.639,0,10.354,2.379,14.143,7.137c3.793,4.757,5.688,10.678,5.688,17.758																							c0,9.977-3.814,18.912-11.443,26.818C69.268,59.613,60.101,64.156,49.394,65.34z M0.923,65.34v-4.131																							c12.321-7.088,19.926-16.074,22.813-26.965c-3.126,2.032-5.993,3.051-8.598,3.051c-4.219,0-7.794-1.721-10.734-5.168																							C1.467,28.683,0,24.473,0,19.487C0,13.976,1.919,9.346,5.757,5.609C9.595,1.873,14.334,0,19.971,0																							c5.685,0,10.41,2.379,14.178,7.137c3.767,4.757,5.652,10.678,5.652,17.758c0,9.977-3.805,18.912-11.409,26.818																							C20.787,59.613,11.632,64.156,0.923,65.34z"></path>
+                    </svg>
+                    <h3 class="quote-text">Just like designing a building, inking skin requires the same amount of focus and planning.</h3>
                   </div>
                 </div>
-                <div class="button-block button-form-group">
-                  <button class="button button-primary" type="submit">Login</button>
-                  <button class="button button-default-outline" type="submit">create an account</button>
+                <div class="box-team-info-carousel">
+                  <h4 class="heading-title">Certificates and Diplomas</h4>
+                  <!-- Owl Carousel-->
+                  <div class="owl-carousel text-center" data-items="2" data-sm-items="3" data-md-items="4" data-lg-items="4" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false" data-lightgallery="group"><a data-lightgallery="item" href="images/team-member-7-119x170_original.jpg"><img src="images/team-member-7-119x170.jpg" alt="" width="119" height="170"/></a><a data-lightgallery="item" href="images/team-member-8-122x170_original.jpg"><img src="images/team-member-8-122x170.jpg" alt="" width="122" height="170"/></a><a data-lightgallery="item" href="images/team-member-7-119x170_original.jpg"><img src="images/team-member-9-119x170.jpg" alt="" width="119" height="170"/></a><a data-lightgallery="item" href="images/team-member-10-121x170_original.jpg"><img src="images/team-member-10-121x170.jpg" alt="" width="121" height="170"/></a></div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <hr>
-      <!-- Contact us-->
-      <section class="section section-md bg-default text-center">
+      <section class="section section-lg bg-gray-100 text-center">
         <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-md-9 col-lg-7 col-xl-5">
-              <h4 class="heading-title">Contact us</h4>
-              <!-- RD Mailform-->
-              <form class="rd-form rd-mailform rd-form-icon" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
-                  <label class="form-label" for="contact-name">Your Name</label><span class="icon mercury-icon-user input-icon"></span>
-                </div>
-                <div class="form-wrap">
-                  <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
-                  <label class="form-label" for="contact-email">Your Email</label><span class="icon mercury-icon-e-mail input-icon"></span>
-                </div>
-                <div class="form-wrap">
-                  <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric">
-                  <label class="form-label" for="contact-phone">Your Phone</label><span class="icon mercury-icon-phone input-icon"></span>
-                </div>
-                <div class="form-wrap textarea-wrap">
-                  <label class="form-label" for="contact-message">Your Message</label>
-                  <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea><span class="icon mercury-icon-pencil input-icon"></span>
-                </div>
-                <div class="button-block">
-                  <button class="button button-primary" type="submit">Send Message</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr>
-      <!-- Contact Us-->
-      <section class="section section-md bg-default text-center">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-md-9 col-lg-7 col-xl-5">
-              <h4 class="heading-title">Contact Us (with reCAPTCHA)</h4>
-              <!-- RD Mailform-->
-              <form class="rd-form rd-mailform rd-form-icon" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <input class="form-input" id="contact-2-name" type="text" name="name" data-constraints="@Required">
-                  <label class="form-label" for="contact-2-name">Your Name</label><span class="icon mercury-icon-user input-icon"></span>
-                </div>
-                <div class="form-wrap">
-                  <input class="form-input" id="contact-2-email" type="email" name="email" data-constraints="@Email @Required">
-                  <label class="form-label" for="contact-2-email">Your Email</label><span class="icon mercury-icon-e-mail input-icon"></span>
-                </div>
-                <div class="form-wrap">
-                  <input class="form-input" id="contact-2-phone" type="text" name="phone" data-constraints="@Numeric">
-                  <label class="form-label" for="contact-2-phone">Your Phone</label><span class="icon mercury-icon-phone input-icon"></span>
-                </div>
-                <div class="form-wrap textarea-wrap">
-                  <label class="form-label" for="contact-2-message">Your Message</label>
-                  <textarea class="form-input" id="contact-2-message" name="message" data-constraints="@Required"></textarea><span class="icon mercury-icon-pencil input-icon"></span>
-                </div>
-                <div class="form-wrap form-wrap-recaptcha">
-                  <!-- Google captcha-->
-                  <div class="recaptcha" id="captcha1" data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt"></div>
-                </div>
-                <button class="button button-block button-primary" type="submit">Send Message</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Subscribe to Our Newsletter-->
-      <section class="section section-md bg-primary text-center">
-        <div class="container"> 
-          <div class="row justify-content-md-center row-30 row-lg-40">
-            <div class="col-md-9 col-lg-8">
-              <h2>Subscribe to the Newsletter</h2>
-              <p class="big">Be the first to know about our promotions and discounts!</p>
-            </div>
-            <div class="col-md-9 col-lg-6">
-              <!-- RD Mailform-->
-              <form class="rd-form rd-mailform rd-form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <input class="form-input" id="subscribe-form-0-email" type="email" name="email" data-constraints="@Email @Required"/>
-                  <label class="form-label" for="subscribe-form-0-email">Your E-mail</label>
-                </div>
-                <div class="form-button">
-                  <button class="button button-primary" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section-md bg-default text-center">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-md-9 col-lg-8 col-xl-7">
-              <h4 class="heading-title">MailChimp</h4>
-              <p class="big">Sign up to our newsletter and be the first to know about latest news, special offers, events, and discounts.</p>
-              <!-- Mailchimp-->
-              <form class="rd-form mailchimp-mailform rd-form-inline" data-form-output="form-output-global" action="https://templatemonster.us15.list-manage.com/subscribe/post?u=ba5bb362073a413f48e4a7b90&amp;id=8dc95d9dec" method="post">
-                <div class="form-wrap">
-                  <label class="form-label" for="mailchimp-email">Enter your e-mail</label>
-                  <input class="form-input" id="mailchimp-email" type="email" name="email" data-constraints="@Email @Required">
-                </div>
-                <div class="form-button">
-                  <button class="button button-primary" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section-md bg-default text-center">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-md-9 col-lg-8 col-xl-7">
-              <h4 class="heading-title">Campaign Monitor</h4>
-              <p class="big">Sign up to our newsletter and be the first to know about latest news, special offers, events, and discounts.</p>
-              <!-- Campaign Monitor-->
-              <form class="rd-form campaign-mailform rd-form-inline" data-form-output="form-output-global" action="https://templatermonster.createsend.com/t/j/s/zjjikd/" method="post">
-                <div class="form-wrap">
-                  <label class="form-label" for="campaign-email">Enter your e-mail</label>
-                  <input class="form-input" id="campaign-email" type="email" name="cm-zjjikd-zjjikd" data-constraints="@Email @Required">
-                </div>
-                <div class="form-button">
-                  <button class="button button-primary" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
+          <h2>Mary’s Works</h2>
+          <!-- Owl Carousel-->
+          <div class="owl-carousel carousel-default" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-dots="true" data-nav="true" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false"><img src="images/team-member-1-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-2-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-3-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-4-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-5-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-6-270x270.jpg" alt="" width="270" height="270"/>
           </div>
         </div>
       </section>

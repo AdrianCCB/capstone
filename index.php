@@ -46,6 +46,7 @@
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Opening Hours:</div>
                         <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
+                        <div class="unit-body"> Sat: 10am - 6pm</div>
                       </div>
                     </li>
                   </ul>
@@ -78,10 +79,9 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
@@ -161,7 +161,7 @@
                 <div class="row">
                   <div class="col-sm-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>Reliable & affordable</span><span class="title-big">TATTOO SERVICES</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to J.A.B Ink Studio, a leading tattoo studio providing top-notch tattooing services. We love to give the opportunity to all tattoo lovers to enjoy a wider range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to J.A.B Ink Studio, a class-leading tattoo studio providing top-notch tattooing services. We provide all tattoo lovers the opportunity to enjoy a wide range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@
                 <div class="row">
                   <div class="col-md-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>100% safe & painless</span><span class="title-big">TATTOOING</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">At J.A.B Ink Studio, we guarantee safe tattooing at any of our salons. Even if you haven’t had any tattoos yet, rest assured that our artists will minimize any negative impressions from your first-time tattoo. We wil also take care of all healing procedures depending on your skin type.</p><a class="button button-primary" href="testimonials.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">At J.A.B Ink Studio, safety and sanitation is our priority. First timers and the experienced can rest assured that our artists will uphold class leading standards, ensuring a healthy tattooing and recovery process catered to your skin type.</p><a class="button button-primary" href="testimonials.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -232,8 +232,8 @@
           <div class="row justify-content-md-end">
             <div class="col-lg-6 col-xl-5">
               <h2>A few words about our studio</h2>
-              <p class="big text-gray-800">We have been numerously recognized as #1 tattoo studio in Singapore. We aim to deliver the best tattooing services.</p>
-              <p class="text-spacing-60">Our staff consistently upgrades their ability and knowledge through training and seminars to ensure your tattoo or piercing is performed using the latest industry standards.</p><a class="button button-primary" href="overview.php">learn more</a>
+              <p class="big text-gray-800">We are recognised as #1 tattoo studio in Singapore. We aim to deliver the best tattooing services you can find on our sunny island.</p>
+              <p class="text-spacing-60">Consistently upgrading their ability and knowledge through training and seminars keeps our artists well versed in the latest industry standards.</p><a class="button button-primary" href="overview.php">learn more</a>
             </div>
           </div>
         </div>
@@ -246,7 +246,7 @@
                 <div class="col-md-6 col-lg-12">
                   <h2>Our advantages</h2>
                   <p class="big text-gray-800">For over 10 years of constant improvement, we have become one of the most successful tattoo studio. Here’s why people choose us.</p>
-                  <p>Continuous learning and advanced training is essential in the tattoo industry. That’s why constant evolving and new products and techniques are vitally important to our staff. Every tattoo artist at J.A.B Ink Studio works on their skills and creativity. We are also dedicated to delivering you the best possible result at an affordable price.</p>
+                  <p>Continuous learning and advanced training is essential in the tattoo industry. That’s why by constantly evolving, acquiring new equipment and learning new techniques, every tattoo artist at J.A.B Ink Studio holds a place as a leader in this field. We are also dedicated to delivering you the best possible result at an affordable price.</p>
                 </div>
                 <div class="col-md-6 col-lg-12">
                   <div class="quote-with-image">
@@ -256,7 +256,7 @@
                       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="88.34px" height="65.34px" viewBox="0 0 88.34 65.34" enable-background="new 0 0 88.34 65.34" overflow="scroll" xml:space="preserve" preserveAspectRatio="none">
                         <path d="M49.394,65.34v-4.131c12.318-7.088,19.924-16.074,22.811-26.965c-3.125,2.032-5.968,3.051-8.526,3.051																	c-4.265,0-7.864-1.721-10.803-5.168c-2.937-3.444-4.407-7.654-4.407-12.64c0-5.511,1.932-10.142,5.791-13.878																	C58.123,1.873,62.873,0,68.51,0c5.639,0,10.354,2.379,14.143,7.137c3.793,4.757,5.688,10.678,5.688,17.758																	c0,9.977-3.814,18.912-11.443,26.818C69.268,59.613,60.101,64.156,49.394,65.34z M0.923,65.34v-4.131																	c12.321-7.088,19.926-16.074,22.813-26.965c-3.126,2.032-5.993,3.051-8.598,3.051c-4.219,0-7.794-1.721-10.734-5.168																	C1.467,28.683,0,24.473,0,19.487C0,13.976,1.919,9.346,5.757,5.609C9.595,1.873,14.334,0,19.971,0																	c5.685,0,10.41,2.379,14.178,7.137c3.767,4.757,5.652,10.678,5.652,17.758c0,9.977-3.805,18.912-11.409,26.818																	C20.787,59.613,11.632,64.156,0.923,65.34z"></path>
                       </svg>
-                      <h3 class="quote-text text-right">We are responsible for the quality of the services you receive!</h3>
+                      <h3 class="quote-text text-right">The stories in your heart, written on your skin.</h3>
                     </div>
                   </div>
                 </div>
@@ -278,7 +278,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-lg bg-default text-center">
+      <!-- <section class="section section-lg bg-default text-center">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-9 col-lg-7">
@@ -337,7 +337,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- <section class="section section-lg bg-primary text-center text-lg-left">
         <div class="container">
           <div class="row row-50 justify-content-center justify-content-lg-between">
@@ -356,16 +356,16 @@
           </div>
         </div>
       </section> -->
-      <section class="section section-lg bg-default text-center">
+     <!-- <section class="section section-lg bg-default text-center">
         <div class="container">
           <h2>Our amazing artists</h2>
           <p class="block-lg">J.A.B Ink Studio has a team of talented and highly creative artists whose main goal is not just to keep you satisfied but also impress you with a unique art that will help you stand out from the crowd. The experience and unmatched skills of our tattooists are reasons of our studio’s success.</p>
         </div>
         <div class="container">
           <div class="row row-20">
-            <div class="col-12">
+            <div class="col-12">-->
               <!-- Owl Carousel-->
-              <div class="owl-carousel owl-carousel-center" data-items="1" data-md-items="3" data-xl-items="3" data-dots="false" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="0" data-mouse-drag="false" data-center="true" data-autoplay="false">
+             <!-- <div class="owl-carousel owl-carousel-center" data-items="1" data-md-items="3" data-xl-items="3" data-dots="false" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="0" data-mouse-drag="false" data-center="true" data-autoplay="false">
                 <div class="team-minimal">
                   <figure><img src="images/team-2-370x370.jpg" alt="" width="370" height="370"></figure>
                   <div class="team-minimal-caption">
@@ -399,7 +399,7 @@
             <div class="col-12"><a class="button button-primary" href="our-team.php">View all team</a></div>
           </div>
         </div>
-      </section>
+      </section> 
       <section class="section section-lg bg-default text-center">
         <div class="container">
           <div class="row justify-content-center">
@@ -408,9 +408,9 @@
               <p>Our studio provides tattoos of various complexity. From simple to highly creative artworks, we gather all our achievements in the portfolio. Feel free to take a look at the gallery below to discover our best works.</p>
             </div>
           </div>
-          <div class="row row-30">
+          <div class="row row-30"> -->
             <!-- Isotope Filters-->
-            <div class="col-lg-12">
+          <!--  <div class="col-lg-12">
               <div class="isotope-filters isotope-filters-horizontal">
                 <button class="isotope-filters-toggle button button-sm button-primary" data-custom-toggle="#isotope-filters" data-custom-toggle-disable-on-blur="true">Filter<span class="caret"></span></button>
                 <ul class="isotope-filters-list" id="isotope-filters">
@@ -422,9 +422,9 @@
                   <li><a data-isotope-filter="filter-5" data-isotope-group="gallery" href="#">other</a></li>
                 </ul>
               </div>
-            </div>
+            </div>-->
             <!-- Isotope Content-->
-            <div class="col-lg-12">
+           <!--  <div class="col-lg-12">
               <div class="isotope row" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group" data-column-class=".col-sm-6.col-md-6.col-lg-3">
                 <div class="col-sm-6 isotope-item" data-filter="filter-1"><a class="gallery-item" data-lightgallery="item" href="images/gallery-1-800x1200.jpg"><img src="images/gallery-1-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Black and gray</span><span class="gallery-item-button"></span></a>
                 </div>
@@ -443,7 +443,7 @@
             <div class="col-12"><a class="button button-primary" href="portfolio.php">View all</a></div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="section section-lg bg-primary text-center">
         <div class="container">
           <div class="row justify-content-center">
@@ -627,7 +627,7 @@
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
                   <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Home</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>

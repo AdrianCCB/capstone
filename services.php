@@ -46,6 +46,7 @@
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Opening Hours:</div>
                         <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
+                        <div class="unit-body"> Sat: 10am - 6pm</div>
                       </div>
                     </li>
                   </ul>
@@ -77,10 +78,9 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
@@ -190,7 +190,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-lg bg-gray-100 text-center">
+      <!-- <section class="section section-lg bg-gray-100 text-center">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-9 col-lg-7">
@@ -248,7 +248,8 @@
               </article>
             </div>
           </div>
-        </div>
+        </div> -->
+        <b></b>
       </section>
       <section class="section section-xl bg-default">
         <div class="container">
@@ -270,7 +271,7 @@
                     <p>closed</p>
                   </li>
                 </ul>
-                <p>We will be glad to see you anytime at our salon.</p><a class="button-link button-link-icon" href="appointment.php">make an appointment  <span class="icon fa-arrow-right"></span></a>
+                <p>We will be glad to see you anyday (besides Sundays) at our studio.</p><a class="button-link button-link-icon" href="appointment.php">make an appointment  <span class="icon fa-arrow-right"></span></a>
               </div>
             </div>
             <div class="d-none d-lg-block col-lg-4 img-wrap"><img src="images/home-4-6-498x688.jpg" alt="" width="498" height="688"/>
@@ -280,24 +281,23 @@
                 <h2>Pricing</h2>
                 <ul class="list-md pricing-box-inner-list">
                   <li>
-                    <h4>Tattooing</h4>
-                    <p>from $30.00</p>
+                    <h4>Flash Tattoo</h4>
+                    <p>from $100.00 onwards*</p>
                   </li>
                   <li>
-                    <h4>Piercing</h4>
-                    <p>from $35.00</p>
+                    <h4>Black Tatttoos</h4>
+                    <p>from $100.00 onwards*</p>
                   </li>
                   <li>
                     <h4>Tattoo cover up</h4>
-                    <p>from $60.00</p>
+                    <p>from $200.00 onwards*</p>
                   </li>
                   <li>
                     <h4>Tattoo design</h4>
-                    <p>from $70.00</p>
+                    <p>from $400.00 onwards*</p>
                   </li>
                   <li>
-                    <h4>Permanent makeup</h4>
-                    <p>from $50.00</p>
+                    <p>*Price is dependent on size and complexity</p>
                   </li>
                 </ul>
               </div>
@@ -322,7 +322,7 @@
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a></li>
                   <li class="rd-nav-item active"><a class="rd-nav-link" href="services.php">Services</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>

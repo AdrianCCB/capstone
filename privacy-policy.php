@@ -45,6 +45,7 @@
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Opening Hours:</div>
                         <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
+                        <div class="unit-body"> Sat: 10am - 6pm</div>
                       </div>
                     </li>
                   </ul>
@@ -76,10 +77,9 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
@@ -201,9 +201,9 @@
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
-                  <li class="rd-nav-item active"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a></li>
