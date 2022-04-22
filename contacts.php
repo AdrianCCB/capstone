@@ -9,7 +9,7 @@ if(isset($_POST["submit"])){
   $phone = $_POST['phone']; // getting customer phone
   $clientEmail = $_POST['email']; // getting customer email
   $clientMessage = $_POST['message'];
-  $subject = "";
+  $subject = "New Contact";
   $subject2 = "Confirmation: Message was submitted successfully."; // for customer confirmation
 
   // Email body I will receive
