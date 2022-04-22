@@ -190,7 +190,7 @@
                 <figure class="team-corporate-img"><img src="images/Jackpf.jpeg" alt="" width="310" height="280"/>
                 </figure>
                 <div class="team-corporate-caption">
-                  <h4 class="team-corporate-title"><a href="team-member-profile.php">Jack</a></h4>
+                  <h4 class="team-corporate-title"><a href="jack-profile.php">Jack</a></h4>
                   <p>Founder, Senior Tattoo Artist</p>
                   <div class="divider"></div>
                   <div class="team-corporate-link"><a href="mailto:#">Jack@jabink.com</a></div>
