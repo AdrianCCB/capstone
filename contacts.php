@@ -1,9 +1,6 @@
 <?php
 
 if(isset($_POST["submit"])){
-  // if($_POST["name"] || $_POST["sec-name"] || $_POST["phone"] || $_POST["email"] || $_POST["message"] == "") {
-  //   echo
-  // }
   $mailto = "adrianchai88@gmail.com"; // my email address
   $name = $_POST['name'] . $_POST['sec-name'];
   $phone = $_POST['phone']; // getting customer phone
