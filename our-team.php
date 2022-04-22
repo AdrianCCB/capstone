@@ -175,7 +175,7 @@
           <div class="row row-30 justify-content-center">
             <div class="col-md-6 col-lg-4">
               <div class="team-corporate">
-                <figure class="team-corporate-img"><img src="images/Barrypf.png" alt="" width="310" height="280"/>
+                <figure class="team-corporate-img"><img src="images/Barrypf.jpeg" alt="" width="310" height="280"/>
                 </figure>
                 <div class="team-corporate-caption">
                   <h4 class="team-corporate-title"><a href="barry-profile.php">Barry</a></h4>
@@ -187,7 +187,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="team-corporate">
-                <figure class="team-corporate-img"><img src="images/Jackpf.png" alt="" width="310" height="280"/>
+                <figure class="team-corporate-img"><img src="images/Jackpf.jpeg" alt="" width="310" height="280"/>
                 </figure>
                 <div class="team-corporate-caption">
                   <h4 class="team-corporate-title"><a href="team-member-profile.php">Jack</a></h4>
