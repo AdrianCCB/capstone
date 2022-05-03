@@ -1,3 +1,79 @@
+<?php
+
+  include('core/config.php');
+  include('core/db.php');
+  include('core/functions.php');
+
+  // $artistCount = $isSuccess = "";
+
+  if(isset($_POST['register'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $serviceOption = $_POST['serviceOption'];
+    $artistOption = $_POST['artistOption'];
+    $message = $_POST['message'];
+    $date = date('Y-m-d', strtotime($_POST['date']));
+    $dateAlert = date('dS M', strtotime($_POST['date']));
+
+    // enquire if email registered before
+    $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
+    $userCount = DB::count();
+    // if there do not have any email registered, insert new user data
+    if($userCount == 0){
+      DB::startTransaction();
+      DB::insert("user", [
+        'userName' => $name,
+        'userEmail' => $email,
+        'userPhone' => $phone
+      ]);
+      DB::commit();
+    } 
+
+    // re-enquire for email registration.
+    $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
+    foreach($userQuery as $userResult){
+      $userID = $userResult['userID'];
+    }
+
+    // combine artist and start date as condition
+    $where = new WhereClause('and'); 
+    $where->add('appointmentArtist=%s', $artistOption);
+    $where->add('appointmentStartDate=%t', $date);
+    
+    // check if artist was booked on the date which customer selected
+    $artistQuery = DB::query("SELECT * FROM appointment WHERE %l", $where);
+    $artistCount = DB::count();
+    
+    // if the date do not have the artist, will start register booking
+    if($artistCount == 0){
+    
+      DB::startTransaction();
+      DB::insert("appointment", [
+        'appointmentStartDate' => $date,
+        'appointmentArtist' => $artistOption,
+        'appointmentComments' => $message,
+        'appointmentService' => $serviceOption,
+        'userID' => $userID
+      ]);
+        
+      $newUserID = DB::insertId();
+      $isSuccess = DB::affectedRows();
+      
+      if ($isSuccess) {
+          DB::commit();
+          echo "<script>alert('Success');</script>";
+          // sweetalert to notify customer booking successful
+      } else {
+          $rollBackError = DB::rollback();
+      }
+    } else {
+      
+      echo "<script>alert('Name and/or password mismatch');</script>";
+    }
+  }
+?>
+
 <!-- Page Title-->
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
@@ -455,12 +531,12 @@
           <div class="row justify-content-center">
             <div class="col-md-10 col-xl-8">
               <!-- RD Mailform-->
-              <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="row row-20 justify-content-center">
+              <form class="text-left" method="post">
+                <div class="row row-20 row-gutters-16 justify-content-center">
                   <div class="col-lg-6">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-name">Your Name</label>
-                      <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                      <input class="form-input" id="contact-name" type="text" name="name"  data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-lg-6">
@@ -476,16 +552,14 @@
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <div class="form-wrap">
-                      <!--Select 2-->
-                      <select class="form-input select-filter" data-placeholder="Select a service.." data-minimum-results-for-search="Infinity" data-minimum-results-search="-1" data-constraints="@Required">
-                        <option label="1"></option>
-                        <option value="2">Tattooing</option>
-                        <option value="3">Piercing</option>
-                        <option value="4">Tattoo cover up</option>
-                        <option value="5">Tattoo design</option>
-                      </select>
-                    </div>
+                    <!--Select 2-->
+                    <select name="serviceOption" class="form-input select-filter" data-placeholder="Select a service.."  data-constraints="@Required">
+                      <option label="1"></option>
+                      <option value="Tattooing">Tattooing</option>
+                      <option value="Piercing">Piercing</option>
+                      <option value="Tattoo cover up">Tattoo cover up</option>
+                      <option value="Tattoo design">Tattoo design</option>
+                    </select>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-wrap">
@@ -494,15 +568,13 @@
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <div class="form-wrap">
-                      <select class="form-input select-filter" data-placeholder="Select an artist..." data-minimum-results-for-search="Infinity" data-minimum-results-search="-1" data-constraints="@Required">
-                        <option label="1"></option>
-                        <option value="2">Sarah Peterson</option>
-                        <option value="3">Sam Williams</option>
-                        <option value="4">Mary Lucas</option>
-                        <option value="5">Peter Adams</option>
-                      </select>
-                    </div>
+                    <select name="artistOption" class="form-input select-filter" data-placeholder="Select an artist..."  data-constraints="@Required">
+                      <option label="1"></option>
+                      <option value="Adrian">Adrian</option>
+                      <option value="Barry">Barry</option>
+                      <option value="Jack">Jack</option>
+                      <!-- <option value="Peter Adams">Peter Adams</option> -->
+                    </select>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-wrap">
@@ -512,7 +584,7 @@
                   </div>
                 </div>
                 <div class="form-button group-sm text-center">
-                  <button class="button button-primary" type="submit">make an appointment now</button>
+                  <button class="button button-primary" name="register" type="submit">make an appointment now</button>
                 </div>
               </form>
             </div>
@@ -657,5 +729,21 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- Sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+
+
+    <?php 
+    if($artistCount == 1){
+      alert1('info', $artistOption . ' not available on ' . $dateAlert , 'Please choose another date', true, 'false');
+    }
+    if($isSuccess){
+      alert1('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false');
+    }
+
+    ?>
+
+  </body>
+</html>
   </body>
 </html>

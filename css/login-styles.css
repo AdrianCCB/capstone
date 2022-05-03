@@ -1,0 +1,12 @@
+
+#login-bg {
+    background-image: url('../images/parallax-03-1920x1340.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .error {
+      color: red;
+  }

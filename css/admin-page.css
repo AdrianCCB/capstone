@@ -1,0 +1,11 @@
+#admin-bg {
+    background-image: url('../images/admin-bg3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* 
+#admin-bg {
+background-color: red;
+} */

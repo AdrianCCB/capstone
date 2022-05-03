@@ -1,3 +1,77 @@
+<?php
+
+  include('core/config.php');
+  include('core/db.php');
+  include('core/functions.php');
+
+  $artistCount = $isSuccess = "";
+  $name = $email = $phone = $message = "";
+
+  if(isset($_POST['register'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $serviceOption = $_POST['serviceOption'];
+    $artistOption = $_POST['artistOption'];
+    $message = $_POST['message'];
+    $date = date('Y-m-d', strtotime($_POST['date']));
+    $dateAlert = date('dS M', strtotime($_POST['date']));
+
+    // enquire if email registered before
+    $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
+    $userCount = DB::count();
+    // if there do not have any email registered, insert new user data
+    if($userCount == 0){
+      DB::startTransaction();
+      DB::insert("user", [
+        'userName' => $name,
+        'userEmail' => $email,
+        'userPhone' => $phone
+      ]);
+      DB::commit();
+    } 
+
+    // re-enquire for email registration.
+    $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
+    foreach($userQuery as $userResult){
+      $userID = $userResult['userID'];
+    }
+
+    // combine artist and start date as condition
+    $where = new WhereClause('and'); 
+    $where->add('appointmentArtist=%s', $artistOption);
+    $where->add('appointmentStartDate=%t', $date);
+    
+    // check if artist was booked on the date which customer selected
+    $artistQuery = DB::query("SELECT * FROM appointment WHERE %l", $where);
+    $artistCount = DB::count();
+    
+    // if the date do not have the artist, will start register booking
+    if($artistCount == 0){
+    
+      DB::startTransaction();
+      DB::insert("appointment", [
+        'appointmentStartDate' => $date,
+        'appointmentArtist' => $artistOption,
+        'appointmentComments' => $message,
+        'appointmentService' => $serviceOption,
+        'userID' => $userID
+      ]);
+        
+      $newUserID = DB::insertId();
+      $isSuccess = DB::affectedRows();
+      
+      if ($isSuccess) {
+          DB::commit();
+          // echo "<script>alert('Success');</script>";
+          // sweetalert to notify customer booking successful
+      } else {
+          $rollBackError = DB::rollback();
+      }
+    } 
+  }
+?>
+
 <!-- Page Title--><!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -45,7 +119,6 @@
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Opening Hours:</div>
                         <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
-                        <div class="unit-body"> Sat: 10am - 6pm</div>
                       </div>
                     </li>
                   </ul>
@@ -77,9 +150,10 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php.php">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
@@ -172,62 +246,63 @@
             </div>
           </div>
           <div class="row justify-content-center">
+            
             <div class="col-md-10 col-xl-8">
               <!-- RD Mailform-->
-              <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+              <form class=" text-left" method="post">
                 <div class="row row-20 row-gutters-16 justify-content-center">
                   <div class="col-lg-6">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-name">Your Name</label>
-                      <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                      <input class="form-input" id="contact-name" type="text" name="name" value="<?php echo $name; ?>" data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-email">Your E-mail</label>
-                      <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                      <input class="form-input" id="contact-email" type="email" name="email" value="<?php echo $email; ?>" data-constraints="@Email @Required">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-phone">Your Phone</label>
-                      <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric @Required">
+                      <input class="form-input" id="contact-phone" type="text" name="phone" value="<?php echo $phone; ?>" data-constraints="@Numeric @Required">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <!--Select 2-->
-                    <select class="form-input select-filter" data-placeholder="Select a service.." data-minimum-results-for-search="Infinity" data-minimum-results-search="-1" data-constraints="@Required">
+                    <select name="serviceOption" class="form-input select-filter" data-placeholder="Select a service.."  data-constraints="@Required">
                       <option label="1"></option>
-                      <option value="2">Tattooing</option>
-                      <option value="3">Piercing</option>
-                      <option value="4">Tattoo cover up</option>
-                      <option value="5">Tattoo design</option>
+                      <option value="Tattooing">Tattooing</option>
+                      <option value="Piercing">Piercing</option>
+                      <option value="Tattoo cover up">Tattoo cover up</option>
+                      <option value="Tattoo design">Tattoo design</option>
                     </select>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-wrap">
-                      <label class="form-label" for="date">Date Time</label>
+                      <label class="form-label" for="date">Date</label>
                       <input class="form-input" id="date" type="text" name="date" data-time-picker="date" data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <select class="form-input select-filter" data-placeholder="Select an artist..." data-minimum-results-for-search="Infinity" data-minimum-results-search="-1" data-constraints="@Required">
+                    <select name="artistOption" class="form-input select-filter" data-placeholder="Select an artist..."  data-constraints="@Required">
                       <option label="1"></option>
-                      <option value="2">Sarah Peterson</option>
-                      <option value="3">Sam Williams</option>
-                      <option value="4">Mary Lucas</option>
-                      <option value="5">Peter Adams</option>
+                      <option value="Adrian">Adrian</option>
+                      <option value="Barry">Barry</option>
+                      <option value="Jack">Jack</option>
+                      <!-- <option value="Peter Adams">Peter Adams</option> -->
                     </select>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-message">Your comment</label>
-                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                      <textarea class="form-input" id="contact-message" name="message" value="<?php echo $message; ?>" data-constraints="@Required"></textarea>
                     </div>
                   </div>
                 </div>
                 <div class="form-button group-sm text-center">
-                  <button class="button button-primary" type="submit">make an appointment now</button>
+                  <button class="button button-primary" name="register" type="submit">make an appointment now</button>
                 </div>
               </form>
             </div>
@@ -251,9 +326,9 @@
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="gallery-without-padding.php">Portfolio</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>
                   <li class="rd-nav-item active"><a class="rd-nav-link" href="appointment.php">Appointment</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a></li>
@@ -281,5 +356,19 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- Sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+
+
+    <?php 
+    if($artistCount == 1){
+      alert1('info', $artistOption . ' not available on ' . $dateAlert , 'Please choose another date', true, 'false');
+    }
+    if($isSuccess){
+      alert1('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false');
+    }
+
+    ?>
+
   </body>
 </html>
