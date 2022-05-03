@@ -62,14 +62,10 @@
       
       if ($isSuccess) {
           DB::commit();
-          echo "<script>alert('Success');</script>";
           // sweetalert to notify customer booking successful
       } else {
           $rollBackError = DB::rollback();
       }
-    } else {
-      
-      echo "<script>alert('Name and/or password mismatch');</script>";
     }
   }
 ?>
