@@ -6,6 +6,13 @@
 
   $artistCount = $isSuccess = "";
   $name = $email = $phone = $message = "";
+  $formNameError = $formNamePass = "";
+  $formPhoneError = $formPhonePass = "";
+  $formEmailError = $formEmailPass= "";
+  $formDateError = $formDatePass = "";
+  $formArtistError = $formArtistPass = "";
+  $formServiceError = $formServicePass = "";
+  $formMessageError = $formMessagePass = "";
 
   if(isset($_POST['register'])){
     $name = $_POST['name'];
@@ -17,57 +24,109 @@
     $date = date('Y-m-d', strtotime($_POST['date']));
     $dateAlert = date('dS M', strtotime($_POST['date']));
 
-    // enquire if email registered before
-    $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
-    $userCount = DB::count();
-    // if there do not have any email registered, insert new user data
-    if($userCount == 0){
-      DB::startTransaction();
-      DB::insert("user", [
-        'userName' => $name,
-        'userEmail' => $email,
-        'userPhone' => $phone
-      ]);
-      DB::commit();
-    } 
-
-    // re-enquire for email registration.
-    $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
-    foreach($userQuery as $userResult){
-      $userID = $userResult['userID'];
+    // Start of validation for the form
+    # Check for Name input
+    if (empty($name)) {
+      $formNameError = true;
+    } else {
+      $formNamePass = true;
     }
 
-    // combine artist and start date as condition
-    $where = new WhereClause('and'); 
-    $where->add('appointmentArtist=%s', $artistOption);
-    $where->add('appointmentStartDate=%t', $date);
-    
-    // check if artist was booked on the date which customer selected
-    $artistQuery = DB::query("SELECT * FROM appointment WHERE %l", $where);
-    $artistCount = DB::count();
-    
-    // if the date do not have the artist, will start register booking
-    if($artistCount == 0){
-    
-      DB::startTransaction();
-      DB::insert("appointment", [
-        'appointmentStartDate' => $date,
-        'appointmentArtist' => $artistOption,
-        'appointmentComments' => $message,
-        'appointmentService' => $serviceOption,
-        'userID' => $userID
-      ]);
-        
-      $newUserID = DB::insertId();
-      $isSuccess = DB::affectedRows();
-      
-      if ($isSuccess) {
-          DB::commit();
-          // sweetalert to notify customer booking successful
-      } else {
-          $rollBackError = DB::rollback();
+    # Check for Phone input
+    if (empty($phone)) {
+    $formPhoneError = true;
+    } else {
+      $formPhonePass = true;
+    }
+
+    # Check for E-mail input
+    if (empty($email)) {
+      $formEmailError = true;
+    } else {
+      $formEmailPass = true;
+    }
+
+    # Check for Date input
+    if (empty($date) || $date == "1970-01-01") {
+      $formDateError = true;
+    } else {
+      $formDatePass = true;
+    }
+
+    # Check for Service Option input
+    if (empty($serviceOption)) {
+      $formServiceError = true;
+    } else {
+      $formServicePass = true;
+    }
+
+    # Check for Artist Option input
+    if (empty($artistOption)) {
+      $formArtistError = true;
+    } else {
+      $formArtistPass = true;
+    }
+
+    # Check for Artist Option input
+    if (empty($message)) {
+      $formMessageError = true;
+    } else {
+      $formMessagePass = true;
+    }
+
+    if($formNamePass && $formPhonePass && $formEmailPass && $formDatePass && $formServicePass && $formArtistPass && $formMessagePass== true){
+      // enquire if email registered before
+      $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
+      $userCount = DB::count();
+      // if there do not have any email registered, insert new user data
+      if($userCount == 0){
+        DB::startTransaction();
+        DB::insert("user", [
+          'userName' => $name,
+          'userEmail' => $email,
+          'userPhone' => $phone
+        ]);
+        DB::commit();
+      } 
+
+      // re-enquire for email registration.
+      $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
+      foreach($userQuery as $userResult){
+        $userID = $userResult['userID'];
       }
-    } 
+
+      // combine artist and start date as condition
+      $where = new WhereClause('and'); 
+      $where->add('appointmentArtist=%s', $artistOption);
+      $where->add('appointmentStartDate=%t', $date);
+      
+      // check if artist was booked on the date which customer selected
+      $artistQuery = DB::query("SELECT * FROM appointment WHERE %l", $where);
+      $artistCount = DB::count();
+      
+      // if the date do not have the artist, will start register booking
+      if($artistCount == 0){
+      
+        DB::startTransaction();
+        DB::insert("appointment", [
+          'appointmentStartDate' => $date,
+          'appointmentArtist' => $artistOption,
+          'appointmentComments' => $message,
+          'appointmentService' => $serviceOption,
+          'userID' => $userID
+        ]);
+          
+        $newUserID = DB::insertId();
+        $isSuccess = DB::affectedRows();
+        
+        if ($isSuccess) {
+            DB::commit();
+            // sweetalert to notify customer booking successful
+        } else {
+            $rollBackError = DB::rollback();
+        }
+      }
+    }
   }
 ?>
 
@@ -247,7 +306,7 @@
             
             <div class="col-md-10 col-xl-8">
               <!-- RD Mailform-->
-              <form class=" text-left" method="post">
+              <form id="appointment-form" class="text-left" method="post">
                 <div class="row row-20 row-gutters-16 justify-content-center">
                   <div class="col-lg-6">
                     <div class="form-wrap">
@@ -271,10 +330,10 @@
                     <!--Select 2-->
                     <select name="serviceOption" class="form-input select-filter" data-placeholder="Select a service.."  data-constraints="@Required">
                       <option label="1"></option>
-                      <option value="Tattooing">Tattooing</option>
-                      <option value="Piercing">Piercing</option>
-                      <option value="Tattoo cover up">Tattoo cover up</option>
-                      <option value="Tattoo design">Tattoo design</option>
+                      <option value="Tattooing" <?php if(isset($serviceOption) && $serviceOption == "Tattooing") echo "selected" ?>>Tattooing</option>
+                      <option value="Piercing" <?php if(isset($serviceOption) && $serviceOption == "Piercing") echo "selected" ?>>Piercing</option>
+                      <option value="Tattoo cover up" <?php if(isset($serviceOption) && $serviceOption == "Tattoo cover up") echo "selected" ?>>Tattoo cover up</option>
+                      <option value="Tattoo design" <?php if(isset($serviceOption) && $serviceOption == "Tattoo design") echo "selected" ?>>Tattoo design</option>
                     </select>
                   </div>
                   <div class="col-lg-6">
@@ -286,16 +345,16 @@
                   <div class="col-lg-6">
                     <select name="artistOption" class="form-input select-filter" data-placeholder="Select an artist..."  data-constraints="@Required">
                       <option label="1"></option>
-                      <option value="Adrian">Adrian</option>
-                      <option value="Barry">Barry</option>
-                      <option value="Jack">Jack</option>
+                      <option value="Adrian" <?php if(isset($artistOption) && $artistOption == "Adrian") echo "selected" ?> >Adrian</option>
+                      <option value="Barry" <?php if(isset($artistOption) && $artistOption == "Barry") echo "selected" ?>>Barry</option>
+                      <option value="Jack" <?php if(isset($artistOption) && $artistOption == "Jack") echo "selected" ?>>Jack</option>
                       <!-- <option value="Peter Adams">Peter Adams</option> -->
                     </select>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-message">Your comment</label>
-                      <textarea class="form-input" id="contact-message" name="message" value="<?php echo $message; ?>" data-constraints="@Required"></textarea>
+                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"><?php echo $message ;?></textarea>
                     </div>
                   </div>
                 </div>
@@ -354,6 +413,8 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- jQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
     <!-- Sweetalert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 
@@ -363,7 +424,23 @@
       alert1('info', $artistOption . ' not available on ' . $dateAlert , 'Please choose another date', true, 'false');
     }
     if($isSuccess){
-      alert1('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false');
+      alertReset('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false');
+    }
+
+    if($formDateError == true){
+      alert1('error', 'Missing Date' , 'Please select a date', true, 'false');
+    }
+
+    if($formMessageError == true){
+      alert1('error', 'Missing Message' , 'Please leave us a message for us to serve you better', true, 'false');
+    }
+
+    if($formServiceError == true || $formArtistError == true){
+      alert1('error', 'Missing Service and/or Artist' , 'Please make selection', true, 'false');
+    }
+
+    if($formNameError || $formPhoneError || $formEmailError == true){
+      alert1('error', 'Missing Details' , 'Please fill up your contact details', true, 'false');
     }
 
     ?>

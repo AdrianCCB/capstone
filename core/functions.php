@@ -13,6 +13,26 @@
             </script>";
     }
 
+    # sweet alert pop up and reset form
+    function alertReset($icon, $title, $text, $confirm, $timer){
+        echo "<script>
+            Swal.fire({
+                position: 'center',
+                icon: '$icon',
+                title: '$title',
+                text: '$text',
+                showConfirmButton: '$confirm',
+                timer: $timer
+                }).then(function(){
+                   $('#contact-name').val('');
+                   $('#contact-email').val('');
+                   $('#contact-phone').val('');
+                   $('#contact-message').val('');
+                });
+            </script>";
+    }
+        // $('#appointment-form')[0].reset();
+
     # sweet alert pop up and redirect
     function alertRedirect($icon, $title, $text, $confirm, $timer, $redirect){
         echo "<script>
@@ -69,6 +89,6 @@
         if (is_array($output))
             $output = implode(',', $output);
     
-        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+        echo "<script>console.log('Console log: " . $output . "' );</script>";
     }
 ?>
