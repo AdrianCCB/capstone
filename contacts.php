@@ -1,4 +1,5 @@
 
+
 <!-- Page Title--><!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -9,6 +10,10 @@
     <meta charset="utf-8">
     <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+      <!--Sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://sweetalert2.all.min.js"></script>
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;700;900&amp;display=swap">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -20,6 +25,77 @@
     <![endif]-->
   </head>
   <body>
+    <?php
+
+    if(isset($_POST["submit"])){
+      
+      $name = $_POST['name'] . $_POST['sec-name'];
+      $phone = $_POST['phone']; // getting customer phone
+      $clientEmail = $_POST['email']; // getting customer email
+      $clientMessage = $_POST['message'];
+      $subject = "New Contact";
+      $subject2 = "Confirmation: Message was submitted successfully."; // for customer confirmation
+      $body= "";
+      $emailMyself = false;
+      $emailUser = false;
+
+
+      $message2 = "Dear" . $name . "\n"
+      . "Thank you for contacting us! We will get back to you shortly!" . "\n\n"
+      . "You submitted the following message: " . "\n" . $clientMessage . "\n\n"
+      . "Regards," . "\n" . "J.A.B Ink Studio";
+
+      $mailto = "fieryignition@hotmail.com"; // my email address
+
+      // Email body I will receive
+      $body .= "From: ".$name. "\r\n";
+      $body .= "Email: ".$clientEmail. "\r\n";
+      $body .= "Phone: ".$phone. "\r\n";
+      $body .= "Message: ".$clientMessage. "\r\n";
+
+      $emailMyself = mail($mailto,$subject,$body); //Message send to me
+      $emailUser = mail($clientEmail, $subject2, $message2);
+
+      
+    }
+        //     $sucess = "Your message was sent sucessfully!";
+        //   } else {
+        //     $fail = "Sorry! Message was not sent successfully!";
+        //   }
+    
+        // }
+
+      // $message = "Client Name: " . $name . "\n"
+      // . "Phone Number: " . $phone . "\n\n"
+      // . "Client Message: ". "\n" . $clientMessage;
+
+    //   // Message for client confirmation
+    //   $message2 = "Dear" . $name . "\n"
+    //   . "Thank you for contacting us! We will get back to you shortly!" . "\n\n"
+    //   . "You submitted the following message: " . "\n" . $clientMessage . "\n\n"
+    //   . "Regards," . "\n" . "J.A.B Ink Studio";
+
+    //   // Email headers
+    //   $headers = "From: " . $clientEmail; // Client email, I will receive
+    //   $headers2 - "From: " . $mailto; // This will receive client
+
+    //   // PHP mailer function
+
+    //   $results = mail($mailto, $subject, $message, $headers); // this emaill will send to me
+    //   $results2 = mail($clientEmail, $subject2, $message2, $headers2); //THis confirmation email to client
+
+    //   // checking if the email has sent successful
+
+    //   if ($results && $results2) {
+    //     $sucess = "Your message was sent sucessfully!";
+    //   } else {
+    //     $fail = "Sorry! Message was not sent successfully!";
+    //   }
+
+    // }
+
+    ?>
+
     <div class="preloader">
       <div class="preloader-body"> 
         <div class="cssload-jumping"><span></span><span></span><span></span><span></span><span></span></div>
@@ -46,7 +122,6 @@
                       <div class="unit unit-spacing-xs align-items-center">
                         <div class="unit-left">Opening Hours:</div>
                         <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
-                        <div class="unit-body"> Sat: 10am - 6pm</div>
                       </div>
                     </li>
                   </ul>
@@ -78,9 +153,10 @@
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="overview.php">Overview</a></li>
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                           <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
@@ -169,9 +245,9 @@
           <div class="row row-50">
             <div class="col-lg-8">
               <h2>Contact us</h2>
-              <p>You can contact us any way that is convenient for you. We are available 24/7 via fax or email. <br class="d-none d-lg-inline">You can also use a quick contact form below or visit our salon personally.</p>
+              <p>You can contact us any way that is convenient for you. We are available 24/7 via fax or email. <br class="d-none d-lg-inline">You can also use a quick contact form below or visit our studio personally.</p>
               <!-- RD Mailform-->
-              <form class="rd-mailform text-left rd-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+              <form class="rd-mailform text-left rd-form" data-form-output="form-output-global" data-form-type="contact" method="POST" action="contacts.php">
                 <div class="row row-15 row-gutters-16">
                   <div class="col-sm-6">
                     <div class="form-wrap">
@@ -205,7 +281,7 @@
                   </div>
                 </div>
                 <div class="form-button group-sm text-left">
-                  <button class="button button-primary" type="submit">Send message</button>
+                  <button class="button button-primary" name="submit" type="submit">Send message</button>
                 </div>
               </form>
             </div>
@@ -221,7 +297,7 @@
                 </li>
                 <li>
                   <p class="contact-list-title">E-mail</p>
-                  <div class="contact-list-content"><span class="icon mdi mdi-email-outline icon-primary"></span><a href="mailto:#">hello@jabink.com</a></div>
+                  <div class="contact-list-content"><span class="icon mdi mdi-email-outline icon-primary"></span><a href="mailto:#">jabinkstudio@demolink.org</a></div>
                 </li>
                 <li>
                   <p class="contact-list-title">Opening Hours</p>
@@ -255,12 +331,12 @@
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
                   <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="overview.php">About</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a></li>
-                  <li class="rd-nav-item  active"><a class="rd-nav-link" href="contacts.php">Contacts</a></li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="contacts.php">Contacts</a></li>
                 </ul>
               </div>
             </div>
