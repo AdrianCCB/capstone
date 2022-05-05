@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;700;900&amp;display=swap">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -33,33 +33,7 @@
             <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
             <div class="rd-navbar-aside-outer rd-navbar-collapse">
               <div class="rd-navbar-aside">
-                <div class="header-info">
-                  <ul class="list-inline list-inline-md">
-                    <li>
-                    <div class="unit unit-spacing-xs align-items-center">
-                        <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="unit unit-spacing-xs align-items-center">
-                        <div class="unit-left">Opening Hours:</div>
-                        <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
-                        <div class="unit-body"> Sat: 10am - 6pm</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="social-block">
-                  <ul class="list-inline">
-                    <li><a class="icon fa-facebook" href="#"></a></li>
-                    <li><a class="icon fa-twitter" href="#"></a></li>
-                    <li><a class="icon fa-google-plus" href="#"></a></li>
-                    <li><a class="icon fa-vimeo" href="#"></a></li>
-                    <li><a class="icon fa-youtube" href="#"></a></li>
-                    <li><a class="icon fa-pinterest-p" href="#"></a></li>
-                  </ul>
-                </div>
+               <?php include 'templates/navbar-header-info.php'; ?>
               </div>
             </div>
             <div class="rd-navbar-main-outer">
@@ -81,62 +55,14 @@
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
-                          <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
-                        <!-- RD Navbar Dropdown
-                        <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
-                        </ul>
-                      </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
-                        <!-- RD Navbar Dropdown-->
-                        <!-- <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-without-sidebar.html">Blog Without Sidebar</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a></li>
-                        </ul> -->
                       </li>
-                      <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
-                        RD Navbar Megamenu
-                        <ul class="rd-menu rd-navbar-megamenu">
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 1</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs and Accordions</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid System</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
-                            </ul>
-                          </li>
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 2</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="appointment.html">Appointment</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy policy</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="careers.html">Careers</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="team-member-profile.html">Team Member Profile</a></li>
-                            </ul>
-                          </li>
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 3</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="login-register.html">Login-Register</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="faq.html">FAQ</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li> -->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
+                      </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>
@@ -158,7 +84,6 @@
         <div class="container">
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.php">Home</a></li>
-            <!-- <li><a href="#">Pages</a></li> -->
             <li class="active">Privacy Policy</li>
           </ul>
         </div>
@@ -181,19 +106,9 @@
             <dd>Our web site uses the data we collect for three basic purposes: to operate our business and provide (including improving and personalizing) the services we offer, to send communications, including promotional communications, and to display advertising. In carrying out these purposes, we combine data we collect through the various web site services you use to give you a more seamless, consistent and personalized experience. However, to enhance privacy, we have built in technological and procedural safeguards designed to prevent certain data combinations. For example, we store data we collect from you when you are unauthenticated (not signed in) separately from any account information that directly identifies you, such as your name, email address or phone number.</dd>
             <dt class="heading-5">Sharing Your Information</dt>
             <dd>We share your personal data with your consent or as necessary to complete any transaction or provide any service you have requested or authorized. For example, we share your content with third parties when you tell us to do so. When you provide payment data to make a purchase, we will share payment data with banks and other entities that process payment transactions or provide other financial services, and for fraud prevention and credit risk reduction. In addition, we share personal data among our controlled affiliates and subsidiaries. We also share personal data with vendors or agents working on our behalf for the purposes described in this statement. For example, companies we've hired to provide customer service support or assist in protecting and securing our systems and services may need access to personal data in order to provide those functions. In such cases, these companies must abide by our data privacy and security requirements and are not allowed to use personal data they receive from us for any other purpose. We may also disclose personal data as part of a corporate transaction such as a merger or sale of assets.</dd>
-          </dl><a class="privacy-link" href="mailto:#">privacy@demolink.org</a>
+          </dl><a class="privacy-link" href="mailto:jabsinks@gmail.com">jabsinks@gmail.com</a>
         </div>
       </section>
-      <!-- Page Footer-->
-      <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
-      <!--Please note that YOUR_API_KEY should replaced with your key.-->
-      <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
-      <!-- <section class="section google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#e9e9e9&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:29},{&quot;weight&quot;:0.2}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:18}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:21}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#dedede&quot;},{&quot;lightness&quot;:21}]},{&quot;elementType&quot;:&quot;labels.text.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;elementType&quot;:&quot;labels.text.fill&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:36},{&quot;color&quot;:&quot;#333333&quot;},{&quot;lightness&quot;:40}]},{&quot;elementType&quot;:&quot;labels.icon&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2f2f2&quot;},{&quot;lightness&quot;:19}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:17},{&quot;weight&quot;:1.2}]}]">
-        <div class="google-map"></div>
-        <ul class="google-map-markers">
-          <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
-        </ul>
-      </section> -->
       <footer class="section bg-default section-xs-type-1 footer-minimal">
         <div class="container">
           <div class="row row-30 align-items-lg-center justify-content-lg-between">
@@ -213,18 +128,7 @@
           </div>
         </div>
       </footer>
-      <section class="bg-primary section-xs text-center">
-        <div class="container">
-          <div class="row row-20 align-items-lg-center">
-            <div class="col-md-3 text-md-left">
-              <div class="footer-brand"><a href="index.php"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
-            </div>
-            <div class="col-md-6">
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.php">Privacy Policy</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <?php include 'templates/footer-brand.php'; ?>
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>

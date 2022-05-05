@@ -134,17 +134,6 @@ if(isLoggedIn() == 0){
                 html: true
             });
         },
-        // eventDidMount: function(info) {
-        //   var tooltip = new Tooltip(info.el, {
-        //     title: '<html>' + '<h3>' + info.event.extendedProps.service + '</h3>' + '<b>' + 'Customer: ' + '</b>' + info.event.extendedProps.userName + '<br>' + 
-        //           '<b>' + 'Contact: ' + '</b>' + info.event.extendedProps.userPhone + '</html>' + '<br>' + 
-        //           '<b>' + 'Email: ' + '</b>' + info.event.extendedProps.userEmail + '</html>',
-        //     placement: 'top',
-        //     html: true,
-        //     trigger: 'hover',
-        //     container: 'body'
-        //   });
-        // },
 
         // loading all events from DB
         events: 'load.php',    
@@ -283,11 +272,6 @@ if(isLoggedIn() == 0){
         eventData.title = eventData.title + ' by Jack';
         return eventData;   
       } 
-      // else if (eventData.artist == 'Peter Adams'){
-      //   eventData.backgroundColor = 'cyan'; 
-      //   eventData.title = eventData.title + ' by Peter Adams';
-      //   return eventData;   
-      // }
     }
   </script>
 </body>

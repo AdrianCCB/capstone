@@ -82,7 +82,7 @@ if(isLoggedIn() == 0){
                             <i class="far fa-user fa-2x"></i>
                             <h5 class="card-title">Registered Customers</h5>
                             <p class="card-text">
-                                <!-- using count() to count those userPermission whom are not 1 (user) -->
+                                <!-- using count() to count no of users -->
                                 <?php 
                                     $userQuery = DB::query("SELECT * FROM user");
                                     $userCount = DB::count();
@@ -100,7 +100,7 @@ if(isLoggedIn() == 0){
                             <i class="far fa-user fa-2x"></i>
                             <h5 class="card-title">Recent Registered Customer</h5>
                             <p class="card-text">
-                                <!-- using count() to count those userPermission whom are not 1 (user) -->
+                                <!-- retrieve last register user details -->
                                 <?php 
                                     $userQuery = DB::query("SELECT * FROM user WHERE userID = (SELECT MAX(userID) FROM user)");
                                     // $userCount = DB::count();
@@ -257,9 +257,6 @@ if(isLoggedIn() == 0){
     <!-- Datatables JS -->
     <script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-    <!-- Main JS -->
-    <!-- <script src="assests/js/index.js"></script> -->
-    
 </body>
 
 </html>

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;700;900&amp;display=swap">
@@ -88,56 +87,9 @@
                       <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
-                        <!-- RD Navbar Dropdown
-                        <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
-                        </ul>
-                      </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
-                        <!-- RD Navbar Dropdown-->
-                        <!-- <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-without-sidebar.html">Blog Without Sidebar</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a></li>
-                        </ul> -->
                       </li>
-                      <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
-                        RD Navbar Megamenu
-                        <ul class="rd-menu rd-navbar-megamenu">
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 1</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs and Accordions</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid System</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
-                            </ul>
-                          </li>
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 2</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="appointment.html">Appointment</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy policy</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="careers.html">Careers</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="team-member-profile.html">Team Member Profile</a></li>
-                            </ul>
-                          </li>
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 3</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="login-register.html">Login-Register</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="faq.html">FAQ</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li> -->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
+                      </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>

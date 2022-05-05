@@ -1,10 +1,18 @@
 <?php
 
-  include('core/config.php');
+include('core/config.php');
   include('core/db.php');
   include('core/functions.php');
 
-  // $artistCount = $isSuccess = "";
+  $artistCount = $isSuccess = "";
+  $name = $email = $phone = $message = "";
+  $formNameError = $formNamePass = "";
+  $formPhoneError = $formPhonePass = "";
+  $formEmailError = $formEmailPass= "";
+  $formDateError = $formDatePass = "";
+  $formArtistError = $formArtistPass = "";
+  $formServiceError = $formServicePass = "";
+  $formMessageError = $formMessagePass = "";
 
   if(isset($_POST['register'])){
     $name = $_POST['name'];
@@ -16,55 +24,107 @@
     $date = date('Y-m-d', strtotime($_POST['date']));
     $dateAlert = date('dS M', strtotime($_POST['date']));
 
-    // enquire if email registered before
-    $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
-    $userCount = DB::count();
-    // if there do not have any email registered, insert new user data
-    if($userCount == 0){
-      DB::startTransaction();
-      DB::insert("user", [
-        'userName' => $name,
-        'userEmail' => $email,
-        'userPhone' => $phone
-      ]);
-      DB::commit();
-    } 
-
-    // re-enquire for email registration.
-    $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
-    foreach($userQuery as $userResult){
-      $userID = $userResult['userID'];
+    // Start of validation for the form
+    # Check for Name input
+    if (empty($name)) {
+      $formNameError = true;
+    } else {
+      $formNamePass = true;
     }
 
-    // combine artist and start date as condition
-    $where = new WhereClause('and'); 
-    $where->add('appointmentArtist=%s', $artistOption);
-    $where->add('appointmentStartDate=%t', $date);
-    
-    // check if artist was booked on the date which customer selected
-    $artistQuery = DB::query("SELECT * FROM appointment WHERE %l", $where);
-    $artistCount = DB::count();
-    
-    // if the date do not have the artist, will start register booking
-    if($artistCount == 0){
-    
-      DB::startTransaction();
-      DB::insert("appointment", [
-        'appointmentStartDate' => $date,
-        'appointmentArtist' => $artistOption,
-        'appointmentComments' => $message,
-        'appointmentService' => $serviceOption,
-        'userID' => $userID
-      ]);
-        
-      $newUserID = DB::insertId();
-      $isSuccess = DB::affectedRows();
+    # Check for Phone input
+    if (empty($phone)) {
+    $formPhoneError = true;
+    } else {
+      $formPhonePass = true;
+    }
+
+    # Check for E-mail input
+    if (empty($email)) {
+      $formEmailError = true;
+    } else {
+      $formEmailPass = true;
+    }
+
+    # Check for Date input
+    if (empty($date) || $date == "1970-01-01") {
+      $formDateError = true;
+    } else {
+      $formDatePass = true;
+    }
+
+    # Check for Service Option input
+    if (empty($serviceOption)) {
+      $formServiceError = true;
+    } else {
+      $formServicePass = true;
+    }
+
+    # Check for Artist Option input
+    if (empty($artistOption)) {
+      $formArtistError = true;
+    } else {
+      $formArtistPass = true;
+    }
+
+    # Check for Artist Option input
+    if (empty($message)) {
+      $formMessageError = true;
+    } else {
+      $formMessagePass = true;
+    }
+
+    if($formNamePass && $formPhonePass && $formEmailPass && $formDatePass && $formServicePass && $formArtistPass && $formMessagePass== true){
+      // enquire if email registered before
+      $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
+      $userCount = DB::count();
+      // if there do not have any email registered, insert new user data
+      if($userCount == 0){
+        DB::startTransaction();
+        DB::insert("user", [
+          'userName' => $name,
+          'userEmail' => $email,
+          'userPhone' => $phone
+        ]);
+        DB::commit();
+      } 
+
+      // re-enquire for email registration.
+      $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
+      foreach($userQuery as $userResult){
+        $userID = $userResult['userID'];
+      }
+
+      // combine artist and start date as condition
+      $where = new WhereClause('and'); 
+      $where->add('appointmentArtist=%s', $artistOption);
+      $where->add('appointmentStartDate=%t', $date);
       
-      if ($isSuccess) {
-          DB::commit();
-          // sweetalert to notify customer booking successful
-      } else {
-          $rollBackError = DB::rollback();
+      // check if artist was booked on the date which customer selected
+      $artistQuery = DB::query("SELECT * FROM appointment WHERE %l", $where);
+      $artistCount = DB::count();
+      
+      // if the date do not have the artist, will start register booking
+      if($artistCount == 0){
+      
+        DB::startTransaction();
+        DB::insert("appointment", [
+          'appointmentStartDate' => $date,
+          'appointmentArtist' => $artistOption,
+          'appointmentComments' => $message,
+          'appointmentService' => $serviceOption,
+          'userID' => $userID
+        ]);
+          
+        $newUserID = DB::insertId();
+        $isSuccess = DB::affectedRows();
+        
+        if ($isSuccess) {
+            DB::commit();
+            // sweetalert to notify customer booking successful
+        } else {
+            $rollBackError = DB::rollback();
+        }
       }
     }
   }
@@ -79,7 +139,6 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;700;900&amp;display=swap">
@@ -106,33 +165,7 @@
             <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
             <div class="rd-navbar-aside-outer rd-navbar-collapse">
               <div class="rd-navbar-aside">
-                <div class="header-info">
-                  <ul class="list-inline list-inline-md">
-                    <li>
-                      <div class="unit unit-spacing-xs align-items-center">
-                        <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="unit unit-spacing-xs align-items-center">
-                        <div class="unit-left">Opening Hours:</div>
-                        <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
-                        <div class="unit-body"> Sat: 10am - 6pm</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="social-block">
-                  <ul class="list-inline">
-                    <li><a class="icon fa-facebook" href="#"></a></li>
-                    <li><a class="icon fa-twitter" href="#"></a></li>
-                    <li><a class="icon fa-google-plus" href="#"></a></li>
-                    <li><a class="icon fa-vimeo" href="#"></a></li>
-                    <li><a class="icon fa-youtube" href="#"></a></li>
-                    <li><a class="icon fa-pinterest-p" href="#"></a></li>
-                  </ul>
-                </div>
+               <?php include 'templates/navbar-header-info.php'; ?>
               </div>
             </div>
             <div class="rd-navbar-main-outer">
@@ -142,7 +175,6 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <!-- <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-inverse-260x82.png" alt="" width="130" height="41"/></a></div> -->
                   <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
@@ -155,62 +187,14 @@
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
                           <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
-                          <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
                         </ul>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
-                        <!-- RD Navbar Dropdown
-                        <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
-                        </ul>
-                      </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
-                        <!-- RD Navbar Dropdown-->
-                        <!-- <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-without-sidebar.html">Blog Without Sidebar</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a></li>
-                        </ul> -->
                       </li>
-                      <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
-                        RD Navbar Megamenu
-                        <ul class="rd-menu rd-navbar-megamenu">
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 1</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs and Accordions</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid System</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
-                            </ul>
-                          </li>
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 2</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="appointment.html">Appointment</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy policy</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="careers.html">Careers</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="team-member-profile.html">Team Member Profile</a></li>
-                            </ul>
-                          </li>
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 3</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="login-register.html">Login-Register</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="faq.html">FAQ</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li> -->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
+                      </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>
@@ -233,7 +217,7 @@
                 <div class="row">
                   <div class="col-sm-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>Reliable & affordable</span><span class="title-big">TATTOO SERVICES</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to J.A.B Ink Studio, a class-leading tattoo studio providing top-notch tattooing services. We provide all tattoo lovers the opportunity to enjoy a wide range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to J.A.B Ink Studio, a class-leading tattoo studio providing top-notch tattooing services. We provide all tattoo lovers the opportunity to enjoy a wide range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services " data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -350,172 +334,6 @@
           </div>
         </div>
       </section>
-      <!-- <section class="section section-lg bg-default text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-7">
-              <h2>Our Services</h2>
-              <p>We provide a wide variety of tattooing services to both regular and new clients. At J.A.B Ink Studio, you can expect first-class treatment as well as 100% safe and sterile environment & equipment.</p>
-            </div>
-          </div>
-          <div class="row icon-modern-list no-gutters">
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-modern modern-variant-2">
-                <div class="icon-modern"><img src="images/icon-01-80x80.png" alt="" width="80" height="80"/>
-                </div>
-                <h4 class="box-icon-modern-title"><a href="services.php">Tattooing</a></h4>
-                <p>At our tattoo studio, we combine modern technics with traditional ones for a premium result.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-modern modern-variant-2">
-                <div class="icon-modern"><img src="images/icon-02-80x80.png" alt="" width="80" height="80"/>
-                </div>
-                <h4 class="box-icon-modern-title"><a href="services.php">Piercing</a></h4>
-                <p>Want some extra holes in your body? Our piercing masters will make some for you.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-modern modern-variant-2">
-                <div class="icon-modern"><img src="images/icon-03-80x80.png" alt="" width="80" height="80"/>
-                </div>
-                <h4 class="box-icon-modern-title"><a href="services.php">Tattoo cover up</a></h4>
-                <p>Got some old tattoos that you don’t find pretty? Our talented artists will cover them up for you.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-modern modern-variant-2">
-                <div class="icon-modern"><img src="images/icon-04-80x80.png" alt="" width="80" height="80"/>
-                </div>
-                <h4 class="box-icon-modern-title"><a href="services.php">Tattoo design</a></h4>
-                <p>Nothing can beat the challenge of creating a design that initially is only in your imagination.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-modern modern-variant-2">
-                <div class="icon-modern"><img src="images/icon-05-80x80.png" alt="" width="80" height="80"/>
-                </div>
-                <h4 class="box-icon-modern-title"><a href="services.php">Permanent makeup</a></h4>
-                <p>Permanent makeup is a cosmetic technique which employs tattoos as a means of producing designs.</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-modern modern-variant-2">
-                <div class="icon-modern"><img src="images/icon-06-80x80.png" alt="" width="80" height="80"/>
-                </div>
-                <h4 class="box-icon-modern-title"><a href="services.php">Laser removal</a></h4>
-                <p>Laser tattoo removal offers an effective solution to your unwanted tattoos as a simple outpatient procedure.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- <section class="section section-lg bg-primary text-center text-lg-left">
-        <div class="container">
-          <div class="row row-50 justify-content-center justify-content-lg-between">
-            <div class="col-md-10 col-lg-6">
-              <h2>Our art showcase</h2>
-              <p class="big">Inkvo Tattoo Salon is a place where the best tattoo artists showcase their work. We welcome you to take a look at our best artworks.</p>
-              <p>Our tattoo salon provides creative space for every tatto artist to show their skills and unique ideas. Our clients and visitors are always welcome to take a look at our most impressive tattoos and artworks submitted by the artists of Inkvo. Feel free to take a look at our gallery to discover your future tattoo.</p><a class="button-link button-link-icon" href="gallery-without-padding.html">See All Works<span class="icon fa-arrow-right"></span></a>
-            </div>
-            <div class="col-lg-6"> -->
-              <!-- Owl Carousel-->
-              <!-- <div class="block-sm">
-                <div class="owl-carousel carousel-modern" data-items="1" data-dots="true" data-nav="false" data-stage-padding="0" data-loop="true" data-margin="0" data-mouse-drag="false" data-autoplay="true"><img src="images/home-1-4-549x422.jpg" alt="" width="549" height="422"/><img src="images/home-1-5-549x422.jpg" alt="" width="549" height="422"/><img src="images/home-1-6-549x422.jpg" alt="" width="549" height="422"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-     <!-- <section class="section section-lg bg-default text-center">
-        <div class="container">
-          <h2>Our amazing artists</h2>
-          <p class="block-lg">J.A.B Ink Studio has a team of talented and highly creative artists whose main goal is not just to keep you satisfied but also impress you with a unique art that will help you stand out from the crowd. The experience and unmatched skills of our tattooists are reasons of our studio’s success.</p>
-        </div>
-        <div class="container">
-          <div class="row row-20">
-            <div class="col-12">-->
-              <!-- Owl Carousel-->
-             <!-- <div class="owl-carousel owl-carousel-center" data-items="1" data-md-items="3" data-xl-items="3" data-dots="false" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="0" data-mouse-drag="false" data-center="true" data-autoplay="false">
-                <div class="team-minimal">
-                  <figure><img src="images/team-2-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">Sam Williams</a></h4>
-                    <p>Junior Tattoo Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal">
-                  <figure><img src="images/team-1-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">Mary Lucas</a></h4>
-                    <p>Tattoo Artist</p>
-                  </div>
-                </div>
-                <div class="team-minimal">
-                  <figure><img src="images/team-3-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">George Adams</a></h4>
-                    <p>Receptionist</p>
-                  </div>
-                </div>
-                <div class="team-minimal">
-                  <figure><img src="images/team-4-370x370.jpg" alt="" width="370" height="370"></figure>
-                  <div class="team-minimal-caption">
-                    <h4 class="team-title"><a href="team-member-profile.php">Sarah Peterson</a></h4>
-                    <p>Founder, Senior Tattoo Artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12"><a class="button button-primary" href="our-team.php">View all team</a></div>
-          </div>
-        </div>
-      </section> 
-      <section class="section section-lg bg-default text-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-10 col-xl-9">
-              <h2>Portfolio</h2>
-              <p>Our studio provides tattoos of various complexity. From simple to highly creative artworks, we gather all our achievements in the portfolio. Feel free to take a look at the gallery below to discover our best works.</p>
-            </div>
-          </div>
-          <div class="row row-30"> -->
-            <!-- Isotope Filters-->
-          <!--  <div class="col-lg-12">
-              <div class="isotope-filters isotope-filters-horizontal">
-                <button class="isotope-filters-toggle button button-sm button-primary" data-custom-toggle="#isotope-filters" data-custom-toggle-disable-on-blur="true">Filter<span class="caret"></span></button>
-                <ul class="isotope-filters-list" id="isotope-filters">
-                  <li><a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="#">All</a></li>
-                  <li><a data-isotope-filter="filter-1" data-isotope-group="gallery" href="#">TRADITIONAL TATTOOs</a></li>
-                  <li><a data-isotope-filter="filter-2" data-isotope-group="gallery" href="#">ORNAMENT TATTOOs</a></li>
-                  <li><a data-isotope-filter="filter-3" data-isotope-group="gallery" href="#">MINIMALIStic</a></li>
-                  <li><a data-isotope-filter="filter-4" data-isotope-group="gallery" href="#">BLACK AND WHITE</a></li>
-                  <li><a data-isotope-filter="filter-5" data-isotope-group="gallery" href="#">other</a></li>
-                </ul>
-              </div>
-            </div>-->
-            <!-- Isotope Content-->
-           <!--  <div class="col-lg-12">
-              <div class="isotope row" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group" data-column-class=".col-sm-6.col-md-6.col-lg-3">
-                <div class="col-sm-6 isotope-item" data-filter="filter-1"><a class="gallery-item" data-lightgallery="item" href="images/gallery-1-800x1200.jpg"><img src="images/gallery-1-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Black and gray</span><span class="gallery-item-button"></span></a>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 isotope-item" data-filter="filter-2"><a class="gallery-item" data-lightgallery="item" href="images/gallery-2-800x1200.jpg"><img src="images/gallery-2-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Classic Americana</span><span class="gallery-item-button"></span></a>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 isotope-item" data-filter="filter-3"><a class="gallery-item" data-lightgallery="item" href="images/gallery-3-800x1200.jpg"><img src="images/gallery-3-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Minimalism</span><span class="gallery-item-button"></span></a>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 isotope-item" data-filter="filter-4"><a class="gallery-item" data-lightgallery="item" href="images/gallery-4-800x1200.jpg"><img src="images/gallery-4-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Blackwork</span><span class="gallery-item-button"></span></a>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 isotope-item" data-filter="filter-5"><a class="gallery-item" data-lightgallery="item" href="images/gallery-5-800x1200.jpg"><img src="images/gallery-5-570x570.jpg" alt="" width="570" height="570"/><span class="gallery-item-title">Surrealism</span><span class="gallery-item-button"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12"><a class="button button-primary" href="portfolio.php">View all</a></div>
-          </div>
-        </div>
-      </section> -->
       <section class="section section-lg bg-primary text-center">
         <div class="container">
           <div class="row justify-content-center">
@@ -527,34 +345,34 @@
           <div class="row justify-content-center">
             <div class="col-md-10 col-xl-8">
               <!-- RD Mailform-->
-              <form class="text-left" method="post">
+              <form id="appointment-form" class="text-left" method="post">
                 <div class="row row-20 row-gutters-16 justify-content-center">
                   <div class="col-lg-6">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-name">Your Name</label>
-                      <input class="form-input" id="contact-name" type="text" name="name"  data-constraints="@Required">
+                      <input class="form-input" id="contact-name" type="text" name="name" value="<?php echo $name; ?>" data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-email">Your E-mail</label>
-                      <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                      <input class="form-input" id="contact-email" type="email" name="email" value="<?php echo $email; ?>" data-constraints="@Email @Required">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-phone">Your Phone</label>
-                      <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric @Required">
+                      <input class="form-input" id="contact-phone" type="text" name="phone" value="<?php echo $phone; ?>" data-constraints="@Numeric @Required">
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <!--Select 2-->
+                    <!--Select 4-->
                     <select name="serviceOption" class="form-input select-filter" data-placeholder="Select a service.."  data-constraints="@Required">
                       <option label="1"></option>
-                      <option value="Tattooing">Tattooing</option>
-                      <option value="Piercing">Piercing</option>
-                      <option value="Tattoo cover up">Tattoo cover up</option>
-                      <option value="Tattoo design">Tattoo design</option>
+                      <option value="Tattooing" <?php if(isset($serviceOption) && $serviceOption == "Tattooing") echo "selected" ?>>Tattooing</option>
+                      <option value="Piercing" <?php if(isset($serviceOption) && $serviceOption == "Piercing") echo "selected" ?>>Piercing</option>
+                      <option value="Tattoo cover up" <?php if(isset($serviceOption) && $serviceOption == "Tattoo cover up") echo "selected" ?>>Tattoo cover up</option>
+                      <option value="Tattoo design" <?php if(isset($serviceOption) && $serviceOption == "Tattoo design") echo "selected" ?>>Tattoo design</option>
                     </select>
                   </div>
                   <div class="col-lg-6">
@@ -564,18 +382,18 @@
                     </div>
                   </div>
                   <div class="col-lg-6">
+                    <!--Select 3-->
                     <select name="artistOption" class="form-input select-filter" data-placeholder="Select an artist..."  data-constraints="@Required">
                       <option label="1"></option>
-                      <option value="Adrian">Adrian</option>
-                      <option value="Barry">Barry</option>
-                      <option value="Jack">Jack</option>
-                      <!-- <option value="Peter Adams">Peter Adams</option> -->
+                      <option value="Adrian" <?php if(isset($artistOption) && $artistOption == "Adrian") echo "selected" ?> >Adrian</option>
+                      <option value="Barry" <?php if(isset($artistOption) && $artistOption == "Barry") echo "selected" ?>>Barry</option>
+                      <option value="Jack" <?php if(isset($artistOption) && $artistOption == "Jack") echo "selected" ?>>Jack</option>
                     </select>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-message">Your comment</label>
-                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"><?php echo $message ;?></textarea>
                     </div>
                   </div>
                 </div>
@@ -656,16 +474,16 @@
           </div>
         </div>
       </section>
-      <section class="section section-md bg-primary text-center">
+      <!-- <section class="section section-md bg-primary text-center">
         <div class="container"> 
           <div class="row justify-content-md-center row-30 row-lg-40">
             <div class="col-md-9 col-lg-8">
               <h2>Subscribe to the Newsletter</h2>
               <p class="big">Be the first to know about our promotions and discounts!</p>
             </div>
-            <div class="col-md-9 col-lg-6">
+            <div class="col-md-9 col-lg-6"> -->
               <!-- RD Mailform-->
-              <form class="rd-form rd-mailform rd-form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+              <!-- <form class="rd-form rd-mailform rd-form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
                 <div class="form-wrap">
                   <input class="form-input" id="subscribe-form-0-email" type="email" name="email" data-constraints="@Email @Required"/>
                   <label class="form-label" for="subscribe-form-0-email">Your E-mail</label>
@@ -677,16 +495,6 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- Page Footer-->
-      <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
-      <!--Please note that YOUR_API_KEY should replaced with your key.-->
-      <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
-      <!-- <section class="section google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#e9e9e9&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:29},{&quot;weight&quot;:0.2}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:18}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:21}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#dedede&quot;},{&quot;lightness&quot;:21}]},{&quot;elementType&quot;:&quot;labels.text.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;elementType&quot;:&quot;labels.text.fill&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:36},{&quot;color&quot;:&quot;#333333&quot;},{&quot;lightness&quot;:40}]},{&quot;elementType&quot;:&quot;labels.icon&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2f2f2&quot;},{&quot;lightness&quot;:19}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:17},{&quot;weight&quot;:1.2}]}]">
-        <div class="google-map"></div>
-        <ul class="google-map-markers">
-          <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
-        </ul>
       </section> -->
       <footer class="section bg-default section-xs-type-1 footer-minimal">
         <div class="container">
@@ -707,18 +515,7 @@
           </div>
         </div>
       </footer>
-      <section class="bg-primary section-xs text-center">
-        <div class="container">
-          <div class="row row-20 align-items-lg-center">
-            <div class="col-md-3 text-md-left">
-              <div class="footer-brand"><a href="index.php"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
-            </div>
-            <div class="col-md-6">
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.php">Privacy Policy</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <?php include 'templates/footer-brand.php'; ?>
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
@@ -728,18 +525,30 @@
     <!-- Sweetalert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 
-
     <?php 
     if($artistCount == 1){
       alert1('info', $artistOption . ' not available on ' . $dateAlert , 'Please choose another date', true, 'false');
     }
     if($isSuccess){
-      alert1('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false');
+      alertReset('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false');
     }
 
+    if($formDateError == true){
+      alert1('error', 'Missing Date' , 'Please select a date', true, 'false');
+    }
+
+    if($formMessageError == true){
+      alert1('error', 'Missing Message' , 'Please leave us a message for us to serve you better', true, 'false');
+    }
+
+    if($formServiceError == true || $formArtistError == true){
+      alert1('error', 'Missing Service and/or Artist' , 'Please make selection', true, 'false');
+    }
+
+    if($formNameError || $formPhoneError || $formEmailError == true){
+      alert1('error', 'Missing Details' , 'Please fill up your contact details', true, 'false');
+    }
     ?>
 
-  </body>
-</html>
   </body>
 </html>

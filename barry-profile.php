@@ -1,4 +1,3 @@
-
 <!-- Page Title--><!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;700;900&amp;display=swap">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -28,7 +27,7 @@
       <!-- Page Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
-        <div class="rd-navbar-wrap rd-navbar-wrap-absolute">
+        <div class="rd-navbar-wrap">
           <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
             <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
             <div class="rd-navbar-aside-outer rd-navbar-collapse">
@@ -52,12 +51,12 @@
                 </div>
                 <div class="social-block">
                   <ul class="list-inline">
-                    <li><a class="icon fa-facebook" href="#"></a></li>
-                    <li><a class="icon fa-twitter" href="#"></a></li>
-                    <li><a class="icon fa-google-plus" href="#"></a></li>
-                    <li><a class="icon fa-vimeo" href="#"></a></li>
-                    <li><a class="icon fa-youtube" href="#"></a></li>
-                    <li><a class="icon fa-pinterest-p" href="#"></a></li>
+                    <li><a class="icon fa-facebook" href="https://facebook.com"></a></li>
+                    <li><a class="icon fa-twitter" href="https://twitter.com"></a></li>
+                    <li><a class="icon fa-google-plus" href="https://google.com"></a></li>
+                    <li><a class="icon fa-vimeo" href="https://vimeo.com"></a></li>
+                    <li><a class="icon fa-youtube" href="https://youtube.com/"></a></li>
+                    <li><a class="icon fa-pinterest-p" href="https://pinterest.com/"></a></li>
                   </ul>
                 </div>
               </div>
@@ -69,75 +68,26 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <!-- <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-inverse-260x82.png" alt="" width="130" height="41"/></a></div> -->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="https://www.jabink.com"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="https://www.jabink.com">Home</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a>
                         <!-- RD Navbar Dropdown -->
                         <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
-                          <!-- <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="testimonials.html">Testimonials</a></li> -->
+                          <li class="rd-dropdown-item active"><a class="rd-dropdown-link" href="our-team.php">Our Team</a></li>
                         </ul>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
-                        <!-- RD Navbar Dropdown
-                        <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="gallery-without-padding.html">Gallery without padding</a></li>
-                        </ul>
-                      </li> -->
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
-                        <!-- RD Navbar Dropdown-->
-                        <!-- <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Single Post</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-without-sidebar.html">Blog Without Sidebar</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-modern.html">Blog Modern</a></li>
-                        </ul> -->
                       </li>
-                      <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
-                        RD Navbar Megamenu
-                        <ul class="rd-menu rd-navbar-megamenu">
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 1</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs and Accordions</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid System</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
-                            </ul>
-                          </li>
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 2</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="appointment.html">Appointment</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy policy</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="careers.html">Careers</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="team-member-profile.html">Team Member Profile</a></li>
-                            </ul>
-                          </li>
-                          <li class="rd-megamenu-item">
-                            <h6 class="rd-megamenu-title">Pages 3</h6>
-                            <ul class="rd-megamenu-list">
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="login-register.html">Login-Register</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
-                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="faq.html">FAQ</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li> -->
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
+                      </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="appointment.php">Appointment</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">Contacts</a>
@@ -149,18 +99,18 @@
             </div>
           </nav>
         </div>
-      </header>
+      </header>      
       <section class="section-page-title context-dark" style="background-image: url(images/page-title-1920x427.jpg); background-size: cover;">
         <div class="container">
-          <h1 class="page-title">Team Member Profile</h1>
+          <h1 class="page-title">Barry Profile</h1>
         </div>
       </section>
       <section class="breadcrumbs-custom">
         <div class="container">
           <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Pages</a></li>
-            <li class="active">Team Member Profile</li>
+            <li><a href="https://www.jabink.com">Home</a></li>
+            <li><a href="our-team.php">Our Team</a></li>
+            <li class="active">Barry Profile</li>
           </ul>
         </div>
       </section>
@@ -169,15 +119,15 @@
           <div class="row row-50">
             <div class="col-lg-5 col-xl-4 text-center">
               <div class="row row-30 row-lg-50">
-                <div class="col-12"><img class="img-shadow" src="images/team-1-370x370.jpg" alt="" width="370" height="370"/>
+                <div class="col-12"><img class="img-shadow" src="images/Barrypf.jpeg" alt="" width="370" height="370"/>
                 </div>
-                <div class="col-12"><a class="button button-primary" href="appointment.html">Make an appointment</a></div>
+                <div class="col-12"><a class="button button-primary" href="appointment ">Make an appointment</a></div>
                 <div class="col-12">
                   <ul class="list-inline social-list">
-                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-facebook" href="#"></a></li>
-                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-twitter" href="#"></a></li>
-                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-instagram" href="#"></a></li>
-                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-pinterest-p" href="#"></a></li>
+                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-facebook" href="https://facebook.com"></a></li>
+                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-twitter" href="https://twitter.com"></a></li>
+                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-instagram" href="https://instagram.com"></a></li>
+                    <li><a class="icon icon-circle icon-circle-sm icon-circle-gray fa-pinterest-p" href="https://pinterest.com"></a></li>
                   </ul>
                 </div>
               </div>
@@ -209,21 +159,11 @@
       </section>
       <section class="section section-lg bg-gray-100 text-center">
         <div class="container">
-          <h2>Mary’s Works</h2>
+          <h2>Barry’s Works</h2>
           <!-- Owl Carousel-->
           <div class="owl-carousel carousel-default" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-dots="true" data-nav="true" data-stage-padding="15" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false"><img src="images/team-member-1-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-2-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-3-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-4-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-5-270x270.jpg" alt="" width="270" height="270"/><img src="images/team-member-6-270x270.jpg" alt="" width="270" height="270"/>
           </div>
         </div>
-      </section>
-      <!-- Page Footer-->
-      <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
-      <!--Please note that YOUR_API_KEY should replaced with your key.-->
-      <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
-      <section class="section google-map-container" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#e9e9e9&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:29},{&quot;weight&quot;:0.2}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:18}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:21}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#dedede&quot;},{&quot;lightness&quot;:21}]},{&quot;elementType&quot;:&quot;labels.text.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;elementType&quot;:&quot;labels.text.fill&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:36},{&quot;color&quot;:&quot;#333333&quot;},{&quot;lightness&quot;:40}]},{&quot;elementType&quot;:&quot;labels.icon&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2f2f2&quot;},{&quot;lightness&quot;:19}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:17},{&quot;weight&quot;:1.2}]}]">
-        <div class="google-map"></div>
-        <ul class="google-map-markers">
-          <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
-        </ul>
       </section>
       <footer class="section bg-default section-xs-type-1 footer-minimal">
         <div class="container">
@@ -231,7 +171,7 @@
             <div class="col-lg-10">
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="https://www.jabink.com">Home</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
@@ -248,10 +188,10 @@
         <div class="container">
           <div class="row row-20 align-items-lg-center">
             <div class="col-md-3 text-md-left">
-              <div class="footer-brand"><a href="index.html"><img src="images/logo-inverse-260x82.png" alt="" width="130" height="41"/></a></div>
+              <div class="footer-brand"><a href="index.html"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
             </div>
             <div class="col-md-6">
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.php">Privacy Policy</a></p>
             </div>
           </div>
         </div>
