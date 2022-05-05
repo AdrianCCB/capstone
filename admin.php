@@ -59,7 +59,6 @@ if(isLoggedIn() == 0){
                         Customers
                     </a>
                 </li>
-                <li>
                     <a href="admin-logout.php" class="nav-link text-white">
                         <svg class="bi me-2" width="4" height="16">
                             <use xlink:href="#grid" />
@@ -80,7 +79,7 @@ if(isLoggedIn() == 0){
                     <div class="card text-white bg-primary">
                         <div class="card-body">
                             <i class="far fa-user fa-2x"></i>
-                            <h5 class="card-title">Registered Customers</h5>
+                            <h5 class="card-title">Total Registered Customers</h5>
                             <p class="card-text">
                                 <!-- using count() to count no of users -->
                                 <?php 

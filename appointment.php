@@ -12,7 +12,6 @@
   $formDateError = $formDatePass = "";
   $formArtistError = $formArtistPass = "";
   $formServiceError = $formServicePass = "";
-  $formMessageError = $formMessagePass = "";
 
   if(isset($_POST['register'])){
     $name = $_POST['name'];
@@ -67,14 +66,7 @@
       $formArtistPass = true;
     }
 
-    # Check for Artist Option input
-    if (empty($message)) {
-      $formMessageError = true;
-    } else {
-      $formMessagePass = true;
-    }
-
-    if($formNamePass && $formPhonePass && $formEmailPass && $formDatePass && $formServicePass && $formArtistPass && $formMessagePass== true){
+    if($formNamePass && $formPhonePass && $formEmailPass && $formDatePass && $formServicePass && $formArtistPass == true){
       // enquire if email registered before
       $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
       $userCount = DB::count();
@@ -228,7 +220,6 @@
             </div>
           </div>
           <div class="row justify-content-center">
-            
             <div class="col-md-10 col-xl-8">
               <!-- RD Mailform-->
               <form id="appointment-form" class="text-left" method="post">
@@ -273,13 +264,12 @@
                       <option value="Adrian" <?php if(isset($artistOption) && $artistOption == "Adrian") echo "selected" ?> >Adrian</option>
                       <option value="Barry" <?php if(isset($artistOption) && $artistOption == "Barry") echo "selected" ?>>Barry</option>
                       <option value="Jack" <?php if(isset($artistOption) && $artistOption == "Jack") echo "selected" ?>>Jack</option>
-                      <!-- <option value="Peter Adams">Peter Adams</option> -->
                     </select>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-message">Your comment</label>
-                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"><?php echo $message ;?></textarea>
+                      <textarea class="form-input" id="contact-message" name="message" ><?php echo $message ;?></textarea>
                     </div>
                   </div>
                 </div>
@@ -327,16 +317,13 @@
     if($artistCount == 1){
       alert1('info', $artistOption . ' not available on ' . $dateAlert , 'Please choose another date', true, 'false');
     }
+
     if($isSuccess){
-      alertReset('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false');
+      alertRedirect('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false', 'index.php');
     }
 
     if($formDateError == true){
       alert1('error', 'Missing Date' , 'Please select a date', true, 'false');
-    }
-
-    if($formMessageError == true){
-      alert1('error', 'Missing Message' , 'Please leave us a message for us to serve you better', true, 'false');
     }
 
     if($formServiceError == true || $formArtistError == true){

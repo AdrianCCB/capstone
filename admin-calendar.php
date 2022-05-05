@@ -29,7 +29,7 @@ if(isLoggedIn() == 0){
 
 </head>
 
-<body id="admin-bg">
+<body id="admin-bg" >
   <div class="row  align-items-stretch d-flex">
       <!-- start of left side navbar -->
       <div class="col-lg-2 col-md-3 col-sm-3 d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"  style="height: 100vh;">
@@ -90,7 +90,6 @@ if(isLoggedIn() == 0){
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <!-- Full Calendar JS -->
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
-  <!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
   <script src=" https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
   <script src='https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js'></script> 
   
@@ -122,17 +121,17 @@ if(isLoggedIn() == 0){
         },
         
         eventDidMount: function(info) {
-            $(info.el).tooltip({
-                title: '<html>' + '<h3>' + info.event.extendedProps.service + '</h3>' +
-                    '<b>' + 'Customer: ' + '</b>' + info.event.extendedProps.userName +
-                    '<br>' +
-                    '<b>' + 'Contact: ' + '</b>' + info.event.extendedProps.userPhone +
-                    '</html>' + '<br>' +
-                    '<b>' + 'Email: ' + '</b>' + info.event.extendedProps.userEmail +
-                    '</html>',
-                placement: 'top',
-                html: true
-            });
+          $(info.el).tooltip({
+              title: '<html>' + '<h3>' + info.event.extendedProps.service + '</h3>' +
+                  '<b>' + 'Customer: ' + '</b>' + info.event.extendedProps.userName +
+                  '<br>' +
+                  '<b>' + 'Contact: ' + '</b>' + info.event.extendedProps.userPhone +
+                  '</html>' + '<br>' +
+                  '<b>' + 'Email: ' + '</b>' + info.event.extendedProps.userEmail +
+                  '</html>',
+              placement: 'top',
+              html: true
+          });
         },
 
         // loading all events from DB
@@ -141,35 +140,80 @@ if(isLoggedIn() == 0){
         eventDataTransform: function(eventData) {
             return eventTransform(eventData);            
         },
-        // Add events
+  
+        // add new appointment
         dateClick: function(info) { // Triggered when the user clicks on a date or a time
-          var title = prompt("Enter Services");
-          var artist = prompt("Enter Artist name");
-          if(title) {
-            var start = info.dateStr; // to extract only dateStr
-            $.ajax({
-              url:"insert.php",
-              type:"POST",
-              data:{
-                title: title,
-                start: start,
-                artist: artist
-              },
-              success:function(){
-                Swal.fire({
-                  position: 'top-end',
-                  icon: 'success',
-                  title: 'New appointment added',
-                  showConfirmButton: false,
-                  timer: 1500
-                }).then(function(){
-                  calendar.refetchEvents();  // Refetches events from all sources and rerenders them on the screen.
+          swal.fire({
+            title: 'New Appointment',
+            html: `
+              <input type="text" id="newAppointmentName" class="swal2-input" placeholder="Customer Name">
+              <input type="text" id="newAppointmentEmail" class="swal2-input" placeholder="Customer Email">
+              <input type="text" id="newAppointmentPhone" class="swal2-input" placeholder="Customer Phone">
+              <select id="newAppointmentArtist" class="swal2-input">
+                <option value="" disabled hidden selected>Artist</option>
+                <option value="Adrian">Adrian</option>
+                <option value="Barry">Barry</option>
+                <option value="Jack">Jack</option>
+              </select>
+              <select id="newAppointmentService" class="swal2-input">
+                <option value="" disabled hidden selected>Service</option>
+                <option value="Tattooing">Tattooing</option>
+                <option value="Piercing">Piercing</option>
+                <option value="Tattoo cover up">Tattoo cover up</option>
+                <option value="Tattoo design">Tattoo design</option>
+              </select>
+            `,
+            focusConfirm: false,
+            preConfirm: () => {
+              var newAppointmentName = $('#newAppointmentName').val();
+              var newAppointmentPhone = $('#newAppointmentPhone').val();
+              var newAppointmentEmail = $('#newAppointmentEmail').val();
+              var newAppointmentArtist = $('#newAppointmentArtist').val();
+              var newAppointmentService = $('#newAppointmentService').val();
+              var newAppointmentDate = info.dateStr; // retrieve date via on click
+              var formatDate = new Date(newAppointmentDate);
+              var newFormatDate = formatDate.toLocaleString("en-GB", {
+                day: "numeric",
+                month: "short",
+                year: "numeric"
+              });
+              return [
+                $.ajax({
+                    type: "POST",
+                    url: "admin-calendar-newAppointment.php",
+                    data:{
+                        name: newAppointmentName,
+                        phone: newAppointmentPhone,                            
+                        email: newAppointmentEmail,
+                        artist: newAppointmentArtist,
+                        service: newAppointmentService,
+                        date: newAppointmentDate,
+                    },
+                    success: function(data){ 
+                      if(data == "success") {
+                        Swal.fire(
+                            'Successfully added new appointments',
+                            'Please kindly check the details again',
+                            'success'
+                        ).then(function(){
+                          calendar.refetchEvents();  // Refetches events from all sources and rerenders them on the screen.
+                        })
+                      }
+                      if(data == "Not available") {
+                        Swal.fire(
+                          newAppointmentArtist + ' not available on ' + newFormatDate,
+                          'Please select other artist or change appointment date',
+                          'error'
+                        )
+                      } 
+                    }
                 })
-              }
-            })
-          }
+              ]
+            }
+          })
         },
-        // delete events
+
+        // delete appointment
         eventClick:function(info){
           Swal.fire({
             title: 'Are you sure?',
@@ -205,7 +249,8 @@ if(isLoggedIn() == 0){
             }
           })
         }, 
-        // drag and drop event
+
+        // drag and drop appointment
         eventDrop:function(info) {
           var start = info.event.startStr;
           var title = info.event._def.title;
@@ -218,7 +263,6 @@ if(isLoggedIn() == 0){
             year: "numeric"
           });
           
-          console.log(artist)
           $.ajax({
             url:"update.php",
             type:"POST",
@@ -261,15 +305,15 @@ if(isLoggedIn() == 0){
     function eventTransform(eventData){
       if (eventData.artist == 'Adrian'){
         eventData.backgroundColor = 'red'; 
-        eventData.title = eventData.title + ' by Adrian';
+        eventData.title = eventData.title + ' - Adrian';
         return eventData;   
       } else if (eventData.artist == 'Barry'){
         eventData.backgroundColor = 'orange'; 
-        eventData.title = eventData.title + ' by Barry';
+        eventData.title = eventData.title + ' - Barry';
         return eventData;   
       } else if (eventData.artist == 'Jack'){
         eventData.backgroundColor = 'green'; 
-        eventData.title = eventData.title + ' by Jack';
+        eventData.title = eventData.title + ' - Jack';
         return eventData;   
       } 
     }

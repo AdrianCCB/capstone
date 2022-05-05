@@ -24,14 +24,11 @@
                 showConfirmButton: '$confirm',
                 timer: $timer
                 }).then(function(){
-                   $('#contact-name').val('');
-                   $('#contact-email').val('');
-                   $('#contact-phone').val('');
-                   $('#contact-message').val('');
+                    $('#appointment-form')[0].reset();
                 });
             </script>";
     }
-        // $('#appointment-form')[0].reset();
+        
 
     # sweet alert pop up and redirect
     function alertRedirect($icon, $title, $text, $confirm, $timer, $redirect){
@@ -84,6 +81,7 @@
         }
     }    
 
+    # similar to console.log
     function debug_to_console($data) {
         $output = $data;
         if (is_array($output))

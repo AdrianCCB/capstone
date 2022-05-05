@@ -17,7 +17,7 @@ if(isLoggedIn() == 0){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customers</title>
+    <title>Appointments</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Datatables CSS -->
@@ -56,13 +56,21 @@ if(isLoggedIn() == 0){
                     </a>
                 </li>
                 <li>
-                    <a href="admin-customers.php" class="nav-link text-white active">
+                    <a href="admin-customers.php" class="nav-link text-white">
                         <svg class="bi me-2" width="8" height="16">
                             <use xlink:href="#grid" />
                         </svg>
                         Customers
                     </a>
                 </li>
+                <li>
+                  <a href="admin-appointments.php" class="nav-link text-white active">
+                      <svg class="bi me-2" width="8" height="16">
+                          <use xlink:href="#grid" />
+                      </svg>
+                      Appointments
+                  </a>
+              </li>
                 <li>
                     <a href="admin-logout.php" class="nav-link text-white">
                         <svg class="bi me-2" width="4" height="16">
@@ -77,32 +85,66 @@ if(isLoggedIn() == 0){
 
         <!-- start of user's table -->
         <div class="container-fluid col-lg-8 col-md-8 col-sm-8 pt-4 ">
-            <table class="table display" id="allUsers">
+            <table class="table display" id="allAppointments">
                 <thead>
                     <tr class="text-center">
-                        <!-- <th scope="col">ID</th> -->
-                        <th scope="col">Name</th>
-                        <th scope="col">E-mail</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Customer</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">Edit Info</th>
+                        <th scope="col">Artist</th>
+                        <th scope="col">Service</th>
+                        <th scope="col">Comment</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    // extract user data from DB and display in table format using DATATABLE
-                    $userQuery = DB::query("SELECT * FROM user");
-                    foreach($userQuery as $userResult){
-                        $usingID = $userResult['userID'];
-                        echo '<tr class="text-center">';
-                            echo '<td>' . ucwords($userResult['userName']) . '</td>';
-                            echo '<td>' . $userResult['userEmail'] . '</td>';
-                            echo '<td>' . $userResult['userPhone'] . '</td>';
+                    $appointmentQuery = DB::query("SELECT * FROM appointment");  // enquire data from appointment table
+                    foreach($appointmentQuery as $appointmentResult){
+                        $usingID = $appointmentResult['appointmentID'];
+                        $userQuery = DB::query("SELECT * FROM user WHERE userID=%i", $usingID);  // enquire data from user table
+                        foreach($userQuery as $userResult){
+                            $userName = $userResult["userName"];
+                            $userPhone = $userResult["userPhone"];
+                            $userEmail = $userResult["userEmail"];
+                            $userID = $userResult["userID"];
+                            echo '<tr class="text-center">';
+                            echo '<td>' . $usingID . '</td>';
+                            echo '<td>' . ucwords($appointmentResult['appointmentStartDate']) . '</td>';
+                            echo '<td>' . $userName . '</td>';
+                            echo '<td>' . $userPhone . '</td>';
+                            echo '<td>' . $appointmentResult['appointmentArtist'] . '</td>';
+                            echo '<td>' . $appointmentResult['appointmentService'] . '</td>';
+                            echo '<td>' . $appointmentResult['appointmentComments'] . '</td>';
                             echo '<td> 
-                                    <a class="update-user" id="'. $usingID .'"><i class="fas fa-edit"></i> </a> 
+                                    <a class="update-appointment" id="'. $usingID .'"><i class="fas fa-edit"></i> </a> 
                                 </td>';
-                            
-                        echo '</tr>';
+                            echo '</tr>';
+                        }
                     }
+                    // $userQuery = DB::query("SELECT * FROM user");  // enquire data from user table
+                    // foreach($userQuery as $userResult){
+                    //     $userID = $userResult['userID'];
+                    //     $userName = $userResult["userName"];
+                    //     $userPhone = $userResult["userPhone"];
+                    //     $userEmail = $userResult["userEmail"];
+                    //     $appointmentQuery = DB::query("SELECT * FROM appointment");  // enquire data from appointment table
+                    //     foreach($appointmentQuery as $appointmentResult){
+                    //         echo '<tr class="text-center">';
+                    //         echo '<td>' . $appointmentResult['appointmentID'] . '</td>';
+                    //         echo '<td>' . ucwords($appointmentResult['appointmentStartDate']) . '</td>';
+                    //         echo '<td>' . $userName . '</td>';
+                    //         echo '<td>' . $userPhone . '</td>';
+                    //         echo '<td>' . $appointmentResult['appointmentArtist'] . '</td>';
+                    //         echo '<td>' . $appointmentResult['appointmentService'] . '</td>';
+                    //         echo '<td>' . $appointmentResult['appointmentComments'] . '</td>';
+                    //         echo '<td> 
+                    //                 <a class="update-appointment" id="'. $userID .'"><i class="fas fa-edit"></i> </a> 
+                    //             </td>';
+                    //         echo '</tr>';
+                    //     }
+                    // }
                     ?>
                     </tbody>
             </table>
@@ -129,47 +171,47 @@ if(isLoggedIn() == 0){
     <!-- Datatable script -->
     <script>
         $(document).ready( function () {
-            $('#allUsers').DataTable();
+            $('#allAppointments').DataTable();
         } );       
     </script>
 
     <script>
-        $(".update-user").click(function(){
+        $(".update-appointment").click(function(){
             var element = $(this);
             var update_id = element.attr("id");
-       
+
             $.ajax({
                 type: "POST",
-                url: "admin-customers-onclick.php",
+                url: "admin-appointments-onclick.php",
                 data:{
                     id: update_id,
                 },
                 success: function(info){ 
-                    var userDetails = JSON.parse(info);
-                    var userName = userDetails.userName;
-                    var userEmail = userDetails.userEmail;
-                    var userPhone = userDetails.userPhone;
+                    var appointmentDetails = JSON.parse(info);
+                    var appointmentStartDate = appointmentDetails.date;
+                    var appointmentService = appointmentDetails.service;
+                    var appointmentComment = appointmentDetails.comment;
 
                     Swal.fire({
-                        title: 'Update Customer Details',
+                        title: 'Update Appointment Details',
                         html:
-                            'Name: <input id="swal-input1" class="swal2-input" value="' + userName + '">' + '<br>' +
-                            'E-mail: <input id="swal-input2" class="swal2-input" value="' + userEmail + '">' + '<br>' +
-                            'Phone: <input id="swal-input3" class="swal2-input" value="' + userPhone + '">',
+                            'Date: <input id="swal-input1" class="swal2-input" value="' + appointmentStartDate + '">' + '<br>' +
+                            'Service: <input id="swal-input2" class="swal2-input" value="' + appointmentService + '">' + '<br>' +
+                            'Comment: <input id="swal-input3" class="swal2-input" value="' + appointmentComment + '">',
                         focusConfirm: false,
                         preConfirm: () => {
-                            var name = $('#swal-input1').val();
-                            var email = $('#swal-input2').val();
-                            var phone = $('#swal-input3').val();
+                            var date = $('#swal-input1').val();
+                            var service = $('#swal-input2').val();
+                            var comment = $('#swal-input3').val();
 
                             return [
                                 $.ajax({
                                     type: "POST",
-                                    url: "admin-customers-update.php",
+                                    url: "admin-appointments-update.php",
                                     data:{
-                                        name: name,
-                                        email: email,
-                                        phone: phone,
+                                        date: date,
+                                        service: service,
+                                        comment: comment,
                                         id: update_id,
                                     },
                                     success: function(){ 
@@ -178,7 +220,7 @@ if(isLoggedIn() == 0){
                                             'Please kindly check the details again',
                                             'success'
                                         ).then(function(){
-                                            window.location.href = "admin-customers.php";
+                                            window.location.href = "admin-appointments.php";
                                         })
                                     }
                                 })

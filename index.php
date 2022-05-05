@@ -366,7 +366,7 @@ include('core/config.php');
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <!--Select 4-->
+                    <!--Select 2-->
                     <select name="serviceOption" class="form-input select-filter" data-placeholder="Select a service.."  data-constraints="@Required">
                       <option label="1"></option>
                       <option value="Tattooing" <?php if(isset($serviceOption) && $serviceOption == "Tattooing") echo "selected" ?>>Tattooing</option>
@@ -382,7 +382,6 @@ include('core/config.php');
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <!--Select 3-->
                     <select name="artistOption" class="form-input select-filter" data-placeholder="Select an artist..."  data-constraints="@Required">
                       <option label="1"></option>
                       <option value="Adrian" <?php if(isset($artistOption) && $artistOption == "Adrian") echo "selected" ?> >Adrian</option>
@@ -393,7 +392,7 @@ include('core/config.php');
                   <div class="col-lg-12">
                     <div class="form-wrap">
                       <label class="form-label" for="contact-message">Your comment</label>
-                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"><?php echo $message ;?></textarea>
+                      <textarea class="form-input" id="contact-message" name="message" ><?php echo $message ;?></textarea>
                     </div>
                   </div>
                 </div>
@@ -530,7 +529,7 @@ include('core/config.php');
       alert1('info', $artistOption . ' not available on ' . $dateAlert , 'Please choose another date', true, 'false');
     }
     if($isSuccess){
-      alertReset('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false');
+      alertRedirect('success', 'Successfully booked' , $artistOption . ' on ' . $date , true, 'false', 'index.php');
     }
 
     if($formDateError == true){
