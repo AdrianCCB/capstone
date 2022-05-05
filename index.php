@@ -473,28 +473,6 @@ include('core/config.php');
           </div>
         </div>
       </section>
-      <!-- <section class="section section-md bg-primary text-center">
-        <div class="container"> 
-          <div class="row justify-content-md-center row-30 row-lg-40">
-            <div class="col-md-9 col-lg-8">
-              <h2>Subscribe to the Newsletter</h2>
-              <p class="big">Be the first to know about our promotions and discounts!</p>
-            </div>
-            <div class="col-md-9 col-lg-6"> -->
-              <!-- RD Mailform-->
-              <!-- <form class="rd-form rd-mailform rd-form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <input class="form-input" id="subscribe-form-0-email" type="email" name="email" data-constraints="@Email @Required"/>
-                  <label class="form-label" for="subscribe-form-0-email">Your E-mail</label>
-                </div>
-                <div class="form-button">
-                  <button class="button button-primary" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section> -->
       <footer class="section bg-default section-xs-type-1 footer-minimal">
         <div class="container">
           <div class="row row-30 align-items-lg-center justify-content-lg-between">
