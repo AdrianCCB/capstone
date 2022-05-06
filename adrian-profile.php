@@ -33,33 +33,7 @@
             <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
             <div class="rd-navbar-aside-outer rd-navbar-collapse">
               <div class="rd-navbar-aside">
-                <div class="header-info">
-                  <ul class="list-inline list-inline-md">
-                    <li>
-                      <div class="unit unit-spacing-xs align-items-center">
-                        <div class="unit-left">Call Us:</div>
-                        <div class="unit-body"><a href="tel:#">(+65) 6123-4567</a></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="unit unit-spacing-xs align-items-center">
-                        <div class="unit-left">Opening Hours:</div>
-                        <div class="unit-body"> Mn-Fr: 10am - 8pm</div>
-                        <div class="unit-body"> Sat: 10am - 6pm</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="social-block">
-                  <ul class="list-inline">
-                    <li><a class="icon fa-facebook" href="https://facebook.com"></a></li>
-                    <li><a class="icon fa-twitter" href="https://twitter.com"></a></li>
-                    <li><a class="icon fa-google-plus" href="https://google.com"></a></li>
-                    <li><a class="icon fa-vimeo" href="https://vimeo.com"></a></li>
-                    <li><a class="icon fa-youtube" href="https://youtube.com/"></a></li>
-                    <li><a class="icon fa-pinterest-p" href="https://pinterest.com/"></a></li>
-                  </ul>
-                </div>
+                <?php include 'templates/navbar-header-info.php'; ?>
               </div>
             </div>
             <div class="rd-navbar-main-outer">
@@ -69,13 +43,13 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="https://www.jabink.com"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="index.php"><img class="brand-logo-dark" src="images/logo-black-260x82.png" alt="" width="130" height="41"/><img class="brand-logo-inverse" src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="https://www.jabink.com">Home</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a>
                         <!-- RD Navbar Dropdown -->
@@ -109,7 +83,7 @@
       <section class="breadcrumbs-custom">
         <div class="container">
           <ul class="breadcrumbs-custom-path">
-            <li><a href="https://www.jabink.com">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="our-team.php">Our Team</a></li>
             <li class="active">Adrian Profile</li>
           </ul>
@@ -172,7 +146,7 @@
             <div class="col-lg-10">
               <div class="footer-nav">
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="https://www.jabink.com">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="our-team.php">About</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a></li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a></li>
@@ -185,18 +159,7 @@
           </div>
         </div>
       </footer>
-      <section class="bg-primary section-xs text-center">
-        <div class="container">
-          <div class="row row-20 align-items-lg-center">
-            <div class="col-md-3 text-md-left">
-              <div class="footer-brand"><a href="https://www.jabink.com"><img src="images/logo-white-260x82.png" alt="" width="130" height="41"/></a></div>
-            </div>
-            <div class="col-md-6">
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>&nbsp;</span><a href="privacy-policy.php">Privacy Policy</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <?php include 'templates/footer-brand.php'; ?>
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>

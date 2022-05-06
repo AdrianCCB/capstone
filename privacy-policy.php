@@ -59,7 +59,7 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="services.php">Services</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="portfolio.php">Portfolio</a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="testimonials.php">Testimonials</a>
                       </li>

@@ -100,9 +100,10 @@ include('core/functions.php');
         . "Thank you for contacting us! We will get back to you shortly!" . "\n\n"
         . "You have submitted the following message: " . "\n" . $clientMessage . "\n\n"
         . "Regards," . "\n" . "J.A.B Ink Studio" . "\n"
-        ."(+65) 6123–4567, (+65) 6765-4321";
+        ."(+65) 6123-4567, (+65) 6765-4321";
 
         $mailto = "jabsinks@gmail.com"; // my email address
+        $headers  = "From: JABInk <noreplyjabsinks@gmail.com>" . "\r\n"; // Header for Email
 
         // Email body I will receive
         $body .= "From: ".$name. "\r\n";
@@ -110,8 +111,8 @@ include('core/functions.php');
         $body .= "Phone: ".$phone. "\r\n";
         $body .= "Message: ".$clientMessage. "\r\n";
 
-        $emailMyself = mail($mailto,$subject,$body); //Message send to me
-        $emailUser = mail($clientEmail, $subject2, $message2); //Message to User
+        $emailMyself = mail($mailto,$subject,$body, $headers,"-fnoreplyjabsinks@gmail.com"); //Message send to company mail
+        $emailUser = mail($clientEmail, $subject2, $message2, $headers,"-fnoreplyjabsinks@gmail.com"); //Message to User
         alert1('success','Message send successfully', 'Thank you for your message/feedback. We will get back to you as soon as possible.', true, 'false');
       }
     }
@@ -209,7 +210,7 @@ include('core/functions.php');
                 <div class="row row-50">
                     <div class="col-lg-8">
                         <h2>Contact us</h2>
-                        <p>You can contact us any way that is convenient for you. We are available 24/7 via fax or
+                        <p>You can contact us any way that is convenient for you. We are available in social medias or
                             email. <br class="d-none d-lg-inline">You can also use a quick contact form below or visit
                             our studio personally.</p>
                         <!-- Contact Mailform-->
@@ -264,8 +265,8 @@ include('core/functions.php');
                             <li>
                                 <p class="contact-list-title">Phones</p>
                                 <div class="contact-list-content"><span
-                                        class="icon mdi mdi-phone icon-primary"></span><a href="tel:6123–4567">(+65)
-                                        6123–4567</a><span>, </span><a href="tel:#">(+65) 6765-4321 </a></div>
+                                        class="icon mdi mdi-phone icon-primary"></span><a href="tel:6123-4567">(+65)
+                                        6123-4567</a><span>, </span><a href="tel:#">(+65) 6765-4321 </a></div>
                             </li>
                             <li>
                                 <p class="contact-list-title">E-mail</p>

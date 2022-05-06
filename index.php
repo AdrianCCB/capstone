@@ -67,14 +67,7 @@ include('core/config.php');
       $formArtistPass = true;
     }
 
-    # Check for Artist Option input
-    if (empty($message)) {
-      $formMessageError = true;
-    } else {
-      $formMessagePass = true;
-    }
-
-    if($formNamePass && $formPhonePass && $formEmailPass && $formDatePass && $formServicePass && $formArtistPass && $formMessagePass== true){
+    if($formNamePass && $formPhonePass && $formEmailPass && $formDatePass && $formServicePass && $formArtistPass){
       // enquire if email registered before
       $userQuery = DB::query("SELECT * FROM user WHERE userEmail = %s", $email);
       $userCount = DB::count();
@@ -217,7 +210,7 @@ include('core/config.php');
                 <div class="row">
                   <div class="col-sm-10 col-lg-9 col-xl-8">
                     <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span>Reliable & affordable</span><span class="title-big">TATTOO SERVICES</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to J.A.B Ink Studio, a class-leading tattoo studio providing top-notch tattooing services. We provide all tattoo lovers the opportunity to enjoy a wide range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services " data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Welcome to J.A.B Ink Studio, a class-leading tattoo studio providing top-notch tattooing services. We provide all tattoo lovers the opportunity to enjoy a wide range of styles from Neo Traditional tattoos to Colour realism tattoos to Dotwork tattoos. With us, you can be sure of the result.</p><a class="button button-primary" href="services.php" data-caption-animate="fadeInUp" data-caption-delay="450">Read more</a>
                   </div>
                 </div>
               </div>
@@ -289,7 +282,7 @@ include('core/config.php');
             <div class="col-lg-6 col-xl-5">
               <h2>A few words about our studio</h2>
               <p class="big text-gray-800">We are recognised as #1 tattoo studio in Singapore. We aim to deliver the best tattooing services you can find on our sunny island.</p>
-              <p class="text-spacing-60">Consistently upgrading their ability and knowledge through training and seminars keeps our artists well versed in the latest industry standards.</p><a class="button button-primary" href="overview.php">learn more</a>
+              <p class="text-spacing-60">Consistently upgrading their ability and knowledge through training and seminars keeps our artists well versed in the latest industry standards.</p><a class="button button-primary" href="services.php">learn more</a>
             </div>
           </div>
         </div>
