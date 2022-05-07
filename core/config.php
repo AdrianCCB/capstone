@@ -4,5 +4,5 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 define('SITE_NAME', '');
-// define('SITE_URL', 'http://localhost:8888/capstone/');
+define('SITE_URL', 'http://localhost:8888/capstone/');
 ?>
